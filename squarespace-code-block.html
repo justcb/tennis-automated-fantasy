@@ -1,0 +1,50 @@
+<div id="ta-fantasy-cheat-sheet" style="width:100%;">
+  <p>Loading the latest ATP Fantasy cheat sheet...</p>
+</div>
+<script>
+  (function () {
+    var manifestUrl = "https://fantasy.tennisautomated.com/manifest/latest.json";
+    var mount = document.getElementById("ta-fantasy-cheat-sheet");
+    var iframe;
+
+    function setFallback(message, url) {
+      var html = "<p>" + message + "</p>";
+      if (url) {
+        html += '<p><a href="' + url + '" target="_blank" rel="noopener">Open the cheat sheet in a new tab</a></p>';
+      }
+      mount.innerHTML = html;
+    }
+
+    fetch(manifestUrl, { cache: "no-store" })
+      .then(function (response) {
+        if (!response.ok) throw new Error("Manifest request failed");
+        return response.json();
+      })
+      .then(function (manifest) {
+        if (!manifest.current || !manifest.current.url) throw new Error("Manifest missing current page");
+
+        iframe = document.createElement("iframe");
+        iframe.src = manifest.current.url;
+        iframe.title = manifest.current.label || "ATP Fantasy Cheat Sheet";
+        iframe.style.width = "100%";
+        iframe.style.minHeight = "2200px";
+        iframe.style.border = "0";
+        iframe.style.display = "block";
+        iframe.style.background = "transparent";
+        iframe.loading = "lazy";
+
+        mount.innerHTML = "";
+        mount.appendChild(iframe);
+      })
+      .catch(function () {
+        setFallback("The cheat sheet could not be loaded right now.", manifestUrl);
+      });
+
+    window.addEventListener("message", function (event) {
+      if (!iframe || event.source !== iframe.contentWindow) return;
+      if (!event.data || event.data.type !== "ta-fantasy-height") return;
+      if (typeof event.data.height !== "number") return;
+      iframe.style.height = Math.max(1200, event.data.height + 24) + "px";
+    });
+  })();
+</script>
