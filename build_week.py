@@ -300,60 +300,6 @@ STYLE = """\
 """
 
 
-EMBED_SNIPPET = """\
-<div id="ta-fantasy-cheat-sheet" style="width:100%;">
-  <p>Loading the latest ATP Fantasy cheat sheet...</p>
-</div>
-<script>
-  (function () {
-    var manifestUrl = "https://fantasy.tennisautomated.com/manifest/latest.json";
-    var mount = document.getElementById("ta-fantasy-cheat-sheet");
-    var iframe;
-
-    function setFallback(message, url) {
-      var html = "<p>" + message + "</p>";
-      if (url) {
-        html += '<p><a href="' + url + '" target="_blank" rel="noopener">Open the cheat sheet in a new tab</a></p>';
-      }
-      mount.innerHTML = html;
-    }
-
-    fetch(manifestUrl, { cache: "no-store" })
-      .then(function (response) {
-        if (!response.ok) throw new Error("Manifest request failed");
-        return response.json();
-      })
-      .then(function (manifest) {
-        if (!manifest.current || !manifest.current.url) throw new Error("Manifest missing current page");
-
-        iframe = document.createElement("iframe");
-        iframe.src = manifest.current.url;
-        iframe.title = manifest.current.label || "ATP Fantasy Cheat Sheet";
-        iframe.style.width = "100%";
-        iframe.style.minHeight = "2200px";
-        iframe.style.border = "0";
-        iframe.style.display = "block";
-        iframe.style.background = "transparent";
-        iframe.loading = "lazy";
-
-        mount.innerHTML = "";
-        mount.appendChild(iframe);
-      })
-      .catch(function () {
-        setFallback("The cheat sheet could not be loaded right now.", manifestUrl);
-      });
-
-    window.addEventListener("message", function (event) {
-      if (!iframe || event.source !== iframe.contentWindow) return;
-      if (!event.data || event.data.type !== "ta-fantasy-height") return;
-      if (typeof event.data.height !== "number") return;
-      iframe.style.height = Math.max(1200, event.data.height + 24) + "px";
-    });
-  })();
-</script>
-"""
-
-
 def read_json(path: Path) -> dict[str, Any]:
     with path.open() as handle:
         return json.load(handle)
@@ -501,6 +447,62 @@ def render_embed_resizer(slug: str) -> str:
         setTimeout(sendHeight, 600);
       }})();
     </script>"""
+
+
+def render_squarespace_embed(config: dict[str, Any]) -> str:
+    manifest_url = absolute_url(config["public_base_url"], "/manifest/latest.json")
+    return f"""\
+<div id="ta-fantasy-cheat-sheet" style="width:100%;">
+  <p>Loading the latest ATP Fantasy cheat sheet...</p>
+</div>
+<script>
+  (function () {{
+    var manifestUrl = "{escape(manifest_url, quote=True)}";
+    var mount = document.getElementById("ta-fantasy-cheat-sheet");
+    var iframe;
+
+    function setFallback(message, url) {{
+      var html = "<p>" + message + "</p>";
+      if (url) {{
+        html += '<p><a href="' + url + '" target="_blank" rel="noopener">Open the cheat sheet in a new tab</a></p>';
+      }}
+      mount.innerHTML = html;
+    }}
+
+    fetch(manifestUrl, {{ cache: "no-store" }})
+      .then(function (response) {{
+        if (!response.ok) throw new Error("Manifest request failed");
+        return response.json();
+      }})
+      .then(function (manifest) {{
+        if (!manifest.current || !manifest.current.url) throw new Error("Manifest missing current page");
+
+        iframe = document.createElement("iframe");
+        iframe.src = manifest.current.url;
+        iframe.title = manifest.current.label || "ATP Fantasy Cheat Sheet";
+        iframe.style.width = "100%";
+        iframe.style.minHeight = "2200px";
+        iframe.style.border = "0";
+        iframe.style.display = "block";
+        iframe.style.background = "transparent";
+        iframe.loading = "lazy";
+
+        mount.innerHTML = "";
+        mount.appendChild(iframe);
+      }})
+      .catch(function () {{
+        setFallback("The cheat sheet could not be loaded right now.", manifestUrl);
+      }});
+
+    window.addEventListener("message", function (event) {{
+      if (!iframe || event.source !== iframe.contentWindow) return;
+      if (!event.data || event.data.type !== "ta-fantasy-height") return;
+      if (typeof event.data.height !== "number") return;
+      iframe.style.height = Math.max(1200, event.data.height + 24) + "px";
+    }});
+  }})();
+</script>
+"""
 
 
 def render_page(data: dict[str, Any]) -> str:
@@ -703,15 +705,18 @@ def build_archive_index(config: dict[str, Any], built_pages: list[dict[str, Any]
 def write_support_files() -> None:
     (DIST_DIR / "_headers").write_text(
         "/manifest/latest.json\n"
-        "  Cache-Control: no-store, max-age=0\n\n"
+        "  Cache-Control: no-store, max-age=0\n"
+        "  Access-Control-Allow-Origin: *\n\n"
         "/manifest/archive.json\n"
-        "  Cache-Control: no-store, max-age=0\n\n"
+        "  Cache-Control: no-store, max-age=0\n"
+        "  Access-Control-Allow-Origin: *\n\n"
         "/pages/*\n"
         "  Cache-Control: public, max-age=31536000, immutable\n\n"
         "/index.html\n"
         "  Cache-Control: public, max-age=300\n"
     )
-    (BASE_DIR / "squarespace-code-block.html").write_text(EMBED_SNIPPET)
+    config = load_config()
+    (BASE_DIR / "squarespace-code-block.html").write_text(render_squarespace_embed(config))
 
 
 def build_all(paths: list[Path]) -> list[dict[str, Any]]:
