@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import hashlib
+import hmac
 import json
 import os
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -32,10 +35,10 @@ def save_state(state: dict) -> None:
     STATE_PATH.write_text(json.dumps(state, indent=2) + "\n")
 
 
-def post_json(url: str, payload: dict, headers: dict[str, str]) -> tuple[int, str]:
+def post_body(url: str, body: bytes, headers: dict[str, str]) -> tuple[int, str]:
     request = urllib.request.Request(
         url,
-        data=json.dumps(payload).encode("utf-8"),
+        data=body,
         headers=headers,
         method="POST",
     )
@@ -45,6 +48,11 @@ def post_json(url: str, payload: dict, headers: dict[str, str]) -> tuple[int, st
     except urllib.error.HTTPError as exc:
         body = exc.read(2000).decode("utf-8", "ignore")
         raise SystemExit(f"request error {exc.code}: {body}") from exc
+
+
+def post_json(url: str, payload: dict, headers: dict[str, str]) -> tuple[int, str]:
+    body = json.dumps(payload).encode("utf-8")
+    return post_body(url, body, headers)
 
 
 def buffer_graphql(api_key: str, query: str) -> dict[str, Any]:
@@ -139,7 +147,32 @@ def create_buffer_post(api_key: str, text: str, channel_id: str, mode: str, imag
         raise SystemExit(f"buffer createPost error: {payload['message']}")
 
 
-def deliver_via_buffer(payload: dict[str, Any], force: bool) -> bool:
+def deliver_via_webhook(payload: dict[str, Any]) -> bool:
+    webhook = os.environ.get("SOCIAL_WEBHOOK_URL")
+    if not webhook:
+        return False
+
+    timestamp = str(int(time.time()))
+    headers = {
+        "Content-Type": "application/json",
+        "User-Agent": "tennis-automated-social/1.0",
+        "X-Tennis-Automated-Event": "cheat-sheet-published",
+        "X-Tennis-Automated-Timestamp": timestamp,
+    }
+    secret = os.environ.get("SOCIAL_WEBHOOK_SECRET")
+    body = json.dumps(payload, separators=(",", ":"), sort_keys=True).encode("utf-8")
+    if secret:
+        signed = f"{timestamp}.".encode("utf-8") + body
+        signature = hmac.new(secret.encode("utf-8"), signed, hashlib.sha256).hexdigest()
+        headers["X-Tennis-Automated-Signature"] = f"sha256={signature}"
+
+    status, response_body = post_body(webhook, body, headers)
+    if status < 200 or status >= 300:
+        raise SystemExit(f"webhook error {status}: {response_body}")
+    return True
+
+
+def deliver_via_buffer(payload: dict[str, Any]) -> bool:
     api_key = os.environ.get("BUFFER_API_KEY")
     if not api_key:
         return False
@@ -171,21 +204,13 @@ def main(argv: list[str]) -> int:
         return 0
 
     delivered_now = False
-    if deliver_via_buffer(payload, force):
+    if deliver_via_webhook(payload):
+        delivered_now = True
+    elif deliver_via_buffer(payload):
         delivered_now = True
     else:
-        webhook = os.environ.get("SOCIAL_WEBHOOK_URL")
-        if not webhook:
-            print("skip: neither BUFFER_API_KEY nor SOCIAL_WEBHOOK_URL is configured")
-            return 0
-        status, body = post_json(
-            webhook,
-            payload,
-            {"Content-Type": "application/json"},
-        )
-        if status < 200 or status >= 300:
-            raise SystemExit(f"webhook error {status}: {body}")
-        delivered_now = True
+        print("skip: neither SOCIAL_WEBHOOK_URL nor BUFFER_API_KEY is configured")
+        return 0
 
     if delivered_now:
         delivered[delivery_key] = {

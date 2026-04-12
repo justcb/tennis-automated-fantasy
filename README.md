@@ -6,8 +6,9 @@ This folder now supports repeatable weekly ATP Fantasy cheat sheets from structu
 
 - `build_week.py`: builds one or more weekly pages
 - `publish_week.py`: promotes a chosen week file live and rebuilds output
-- `deliver_social.py`: sends the current social payload to Buffer or a webhook with dedupe
+- `deliver_social.py`: sends the current social payload to a signed webhook relay or Buffer with dedupe
 - `buffer_channels.py`: lists connected Buffer channels from `BUFFER_API_KEY`
+- `social-relay.md`: webhook relay contract and verification notes
 - `data/week-2.json`: Week 2 content source
 - `week-2.html`: generated customer-facing page
 - `dist/`: publish-ready static output for hosting
@@ -48,6 +49,7 @@ Deliver the generated social payload to your webhook:
 
 ```bash
 SOCIAL_WEBHOOK_URL="https://hooks.example.com/..." \
+SOCIAL_WEBHOOK_SECRET="shared-secret" \
 python3 /Users/studio/tennis-automated-fantasy/deliver_social.py
 ```
 
@@ -107,27 +109,37 @@ The build generates current announcement copy for:
 - Instagram image in `dist/social/latest-instagram-card.png`
 - webhook automation in `dist/social/latest.json`
 
-`deliver_social.py` first tries native Buffer posting when `BUFFER_API_KEY` is configured. It auto-discovers channels when there is only one X channel and one Instagram channel on the account. If there are multiple, set:
+Preferred production path:
+
+- set `SOCIAL_WEBHOOK_URL`
+- set `SOCIAL_WEBHOOK_SECRET`
+- let your relay post to Buffer, X, and Instagram
+
+`deliver_social.py` signs outbound webhook requests when `SOCIAL_WEBHOOK_SECRET` is set.
+
+Direct Buffer fallback:
+
+`deliver_social.py` can also try native Buffer posting when `BUFFER_API_KEY` is configured. It auto-discovers channels when there is only one X channel and one Instagram channel on the account. If there are multiple, set:
 
 - `BUFFER_X_CHANNEL_ID`
 - `BUFFER_INSTAGRAM_CHANNEL_ID`
 
-If no Buffer key is configured, it falls back to `SOCIAL_WEBHOOK_URL`.
+Webhook delivery is attempted before direct Buffer delivery.
 
 The script stores a local dedupe log in `.automation-state/` so the same page version is not announced twice.
 If only X is connected in Buffer, the script will still post to X and skip Instagram without failing.
 
 Recommended production path:
 
-1. Connect X and Instagram to Buffer.
-2. Set `BUFFER_API_KEY` for the automation runtime.
-3. If needed, set `BUFFER_X_CHANNEL_ID` and `BUFFER_INSTAGRAM_CHANNEL_ID`.
-4. Let `deliver_social.py` post directly.
+1. Build and publish the cheat sheet from this repo.
+2. Send `dist/social/latest.json` to your webhook relay with `deliver_social.py`.
+3. Have the relay verify the signature, dedupe on `post_key`, and post to social.
+4. Let Buffer or native platform integrations live only in the relay.
 
 Fallback path:
 
-1. Use Zapier or Make to receive `dist/social/latest.json`.
-2. Have that workflow create posts in Buffer for both channels.
+1. Set `BUFFER_API_KEY`.
+2. Let `deliver_social.py` post directly to Buffer when the relay is unavailable.
 
 ## Squarespace
 
