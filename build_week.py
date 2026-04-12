@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from datetime import datetime
 from html import escape
@@ -14,6 +15,7 @@ DATA_DIR = BASE_DIR / "data"
 DIST_DIR = BASE_DIR / "dist"
 PAGES_DIR = DIST_DIR / "pages"
 MANIFEST_DIR = DIST_DIR / "manifest"
+SOCIAL_DIR = DIST_DIR / "social"
 CONFIG_PATH = BASE_DIR / "publish-config.json"
 
 
@@ -594,6 +596,84 @@ def render_archive_index(config: dict[str, Any], pages: list[dict[str, Any]]) ->
 """
 
 
+def strip_html(value: str) -> str:
+    text = re.sub(r"<[^>]+>", " ", value)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def extract_bonus_ball_names(page: dict[str, Any]) -> list[str]:
+    names: list[str] = []
+    for block in page["blocks"]:
+        if block.get("type") != "grid":
+            continue
+        for card in block.get("cards", []):
+            if card.get("title") != "Bonus Ball Board":
+                continue
+            for item in card.get("items", []):
+                tag = item.get("tag", "")
+                name = re.sub(r"^\d+\.\s*", "", tag).strip()
+                if name:
+                    names.append(name)
+            return names
+    return names
+
+
+def build_social_payload(config: dict[str, Any], current: dict[str, Any]) -> dict[str, Any]:
+    SOCIAL_DIR.mkdir(exist_ok=True)
+    url = current["public_url"]
+    label = current["publish"]["label"]
+    week = current["publish"]["week"]
+    bonus_names = extract_bonus_ball_names(current)[:3]
+    bonus_summary = ", ".join(bonus_names) if bonus_names else "the top board is set"
+    dek_text = strip_html(current["dek"])
+    source = str(current["_source_path"].relative_to(BASE_DIR))
+    post_key = current["publish"]["filename"].removesuffix(".html")
+
+    x_lines = [
+        f"{week} is live: {label}.",
+        dek_text,
+        f"Bonus Ball board: {bonus_summary}.",
+        url,
+        "#ATPFantasy #ATPTour #Tennis",
+    ]
+    x_text = "\n".join(x_lines)
+    if len(x_text) > 280:
+        shortened_dek = dek_text
+        max_dek = max(0, 280 - len("\n".join([x_lines[0], "", x_lines[2], x_lines[3], x_lines[4]])) - 2)
+        if len(shortened_dek) > max_dek:
+            shortened_dek = shortened_dek[: max(0, max_dek - 1)].rstrip(" ,.;:") + "…"
+        x_text = "\n".join([x_lines[0], shortened_dek, x_lines[2], x_lines[3], x_lines[4]])
+
+    instagram_caption = "\n".join(
+        [
+            f"{week} is live: {label}",
+            "",
+            dek_text,
+            "",
+            f"Bonus Ball board: {bonus_summary}.",
+            f"Read the full cheat sheet: {url}",
+            "",
+            "#ATPFantasy #ATPTour #Tennis #ClaySeason",
+        ]
+    )
+
+    payload = {
+        "site_title": config["site_title"],
+        "post_key": post_key,
+        "week": week,
+        "label": label,
+        "updated_at": current["publish"]["updated_at"],
+        "url": url,
+        "source": source,
+        "x_text": x_text,
+        "instagram_caption": instagram_caption,
+    }
+    (SOCIAL_DIR / "latest.json").write_text(json.dumps(payload, indent=2) + "\n")
+    (SOCIAL_DIR / "latest-x.txt").write_text(x_text + "\n")
+    (SOCIAL_DIR / "latest-instagram.txt").write_text(instagram_caption + "\n")
+    return payload
+
+
 def validate_week_data(data: dict[str, Any], source_path: Path) -> None:
     required_top = ["page_title", "eyebrow", "headline", "dek", "meta", "blocks", "output", "publish"]
     for key in required_top:
@@ -693,6 +773,7 @@ def build_latest_manifest(config: dict[str, Any], built_pages: list[dict[str, An
         },
     }
     (MANIFEST_DIR / "latest.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    build_social_payload(config, current)
     return manifest
 
 

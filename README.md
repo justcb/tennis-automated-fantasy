@@ -5,6 +5,8 @@ This folder now supports repeatable weekly ATP Fantasy cheat sheets from structu
 ## Files
 
 - `build_week.py`: builds one or more weekly pages
+- `publish_week.py`: promotes a chosen week file live and rebuilds output
+- `deliver_social.py`: sends the current social payload to a webhook with dedupe
 - `data/week-2.json`: Week 2 content source
 - `week-2.html`: generated customer-facing page
 - `dist/`: publish-ready static output for hosting
@@ -35,6 +37,19 @@ Build one file:
 python3 /Users/studio/tennis-automated-fantasy/build_week.py /Users/studio/tennis-automated-fantasy/data/week-2.json
 ```
 
+Promote a week live and rebuild everything:
+
+```bash
+python3 /Users/studio/tennis-automated-fantasy/publish_week.py /Users/studio/tennis-automated-fantasy/data/week-3.json
+```
+
+Deliver the generated social payload to your webhook:
+
+```bash
+SOCIAL_WEBHOOK_URL="https://hooks.example.com/..." \
+python3 /Users/studio/tennis-automated-fantasy/deliver_social.py
+```
+
 ## Publish Output
 
 The build writes:
@@ -44,8 +59,12 @@ The build writes:
 - `dist/manifest/archive.json`
 - `dist/index.html`
 - `dist/_headers`
+- `dist/social/latest.json`
+- `dist/social/latest-x.txt`
+- `dist/social/latest-instagram.txt`
 
 `latest.json` is the live pointer that Squarespace should load.
+`dist/social/latest.json` is the machine-readable announcement payload for the current live page.
 
 ## Live Switching
 
@@ -69,6 +88,24 @@ Recommended pattern:
 - Saturday draw-update file is published as a new version and becomes live.
 - The previous file stays in the archive.
 - Future scaffolds stay local as drafts until you are ready to publish them.
+
+## Social Automation
+
+The build generates current announcement copy for:
+
+- X in `dist/social/latest-x.txt`
+- Instagram in `dist/social/latest-instagram.txt`
+- webhook automation in `dist/social/latest.json`
+
+`deliver_social.py` posts that JSON payload to `SOCIAL_WEBHOOK_URL` and stores a local dedupe log in `.automation-state/` so the same page version is not announced twice.
+
+Recommended production path:
+
+1. Connect X and Instagram to Buffer.
+2. Use Zapier or Make to receive `dist/social/latest.json`.
+3. Have that workflow create posts in Buffer for both channels.
+
+This is more robust than direct browser automation and avoids maintaining separate X and Instagram API integrations inside this repo.
 
 ## Squarespace
 
