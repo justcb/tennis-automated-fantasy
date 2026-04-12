@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tennis Automated | ATP Fantasy Week 3</title>
+    <style>
+      :root {
+        --bg: #f3eee4;
+        --paper: #fffaf2;
+        --ink: #11211d;
+        --muted: #52605c;
+        --accent: #c65a18;
+        --accent-2: #1d6b52;
+        --line: rgba(17, 33, 29, 0.14);
+        --shadow: 0 20px 50px rgba(17, 33, 29, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(198, 90, 24, 0.12), transparent 28%),
+          radial-gradient(circle at top right, rgba(29, 107, 82, 0.12), transparent 32%),
+          linear-gradient(180deg, #efe5d4 0%, var(--bg) 100%);
+      }
+
+      .wrap {
+        width: min(1100px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, rgba(17, 33, 29, 0.96), rgba(29, 107, 82, 0.94));
+        color: #f8f4ec;
+        border-radius: 28px;
+        padding: 36px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -80px -100px auto;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: rgba(198, 90, 24, 0.22);
+        filter: blur(6px);
+        z-index: 0;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 6px 12px;
+        border: 1px solid rgba(248, 244, 236, 0.28);
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.05;
+      }
+
+      h1 {
+        font-size: clamp(42px, 7vw, 78px);
+        margin-top: 16px;
+        max-width: 700px;
+      }
+
+      .dek {
+        margin-top: 18px;
+        max-width: 760px;
+        font-size: 20px;
+        line-height: 1.5;
+        color: rgba(248, 244, 236, 0.88);
+      }
+
+      .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .meta-card,
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .meta-card {
+        padding: 18px;
+        color: var(--ink);
+      }
+
+      .meta-label {
+        display: block;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .meta-value {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 20px;
+        margin-top: 22px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .card h2 {
+        font-size: 28px;
+        margin-bottom: 16px;
+      }
+
+      .card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin: 0 0 14px;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-size: 14px;
+        background: rgba(29, 107, 82, 0.06);
+      }
+
+      .section-title {
+        margin-top: 28px;
+        margin-bottom: 14px;
+        font-size: 14px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent-2);
+      }
+
+      .pick-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .pick {
+        padding: 16px 0 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .pick:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .tag {
+        display: inline-block;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 8px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .archive {
+        width: min(1100px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      .archive-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .archive-item {
+        display: block;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        color: inherit;
+        text-decoration: none;
+        padding: 22px;
+      }
+
+      .archive-item strong {
+        display: block;
+        font-size: 21px;
+        margin-bottom: 8px;
+      }
+
+      .archive-meta {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .footer-note {
+        margin-top: 22px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 860px) {
+        .grid,
+        .two-col {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding: 28px;
+        }
+
+        h1 {
+          font-size: 44px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <span class="eyebrow">Tennis Automated | ATP Fantasy | Week 3 Pre-Draw</span>
+        <h1>Week 3 Cheat Sheet</h1>
+        <p class="dek">Pre-draw edition for <strong>20-26 April 2026</strong>. Week 3 moves to a standalone <strong>Madrid ATP Masters 1000</strong> slate, which changes the build entirely: deep-run equity matters more, the altitude keeps ace upside relevant, and the edge comes from identifying which elite names still have a clean path once the bracket lands.</p>
+        <div class="hero-meta">
+
+          <div class="meta-card">
+            <span class="meta-label">Week Window</span>
+            <span class="meta-value">20-26 April</span>
+          </div>
+
+          <div class="meta-card">
+            <span class="meta-label">Slate</span>
+            <span class="meta-value">Madrid only</span>
+          </div>
+
+          <div class="meta-card">
+            <span class="meta-label">Surface</span>
+            <span class="meta-value">Clay altitude</span>
+          </div>
+
+          <div class="meta-card">
+            <span class="meta-label">Key Date</span>
+            <span class="meta-value">Event starts: 22 Apr</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top: 22px;">
+        <h2>Tournament Lens</h2>
+        <div class="two-col">
+          <div>
+            <h3>Top Of Board</h3>
+            <p>Madrid’s official entry list says the field will feature <strong>all current Top 10 players</strong> in the PIF ATP Rankings. <strong>Carlos Alcaraz</strong> is a two-time Madrid champion, <strong>Jannik Sinner</strong> is a two-time finalist, <strong>Novak Djokovic</strong> is a three-time titlist, and <strong>Casper Ruud</strong> returns as defending champion after lifting the biggest trophy of his career here in 2025. Former champions <strong>Alexander Zverev</strong> and <strong>Andrey Rublev</strong> are also in the field.</p>
+            <ul>
+              <li>Best raw ceiling: Alcaraz</li>
+              <li>Best recent Masters form: Sinner</li>
+              <li>Best veteran leverage: Djokovic</li>
+              <li>Best former-champion value case: Rublev</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Fantasy Shape</h3>
+            <p>Madrid is not a normal clay week. The altitude keeps first-strike tennis live, which means serve bonus hunters matter more here than they do in slower clay events. The tournament also runs standalone from <strong>22 April to 3 May</strong>, so fantasy builds should start with players who have realistic semi-final equity, then layer in upside values such as <strong>Joao Fonseca</strong> and <strong>Learner Tien</strong> once the draw shows where the pressure points are.</p>
+            <ul>
+              <li>Prioritize semi-final equity over one-match upside.</li>
+              <li>Give extra weight to ace production in Madrid conditions.</li>
+              <li>Wait for the draw before stacking one half too aggressively.</li>
+              <li>Watch Barcelona and Munich finalists for turnaround fatigue.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+<section class="grid">
+        <article class="card">
+          <h2>What Matters This Week</h2>
+          <p>ATP Fantasy still gives you a <strong>100-credit</strong> budget, <strong>six starters</strong>, <strong>two alternates</strong>, and one <strong>Bonus Ball</strong> player who scores double. The scoring rules do not change, but a standalone ATP Masters 1000 week changes the math because deep advancement is worth more than simply surviving into Thursday.</p>
+          <p>Player prices are still based on the PIF ATP Live Rankings, which means pre-draw edge usually comes from identifying ranking-driven mispricings before the market settles. Madrid especially rewards players who can hold serve cheaply and finish points early, but that upside only matters if the route is not crowded.</p>
+          <div class="pill-row">
+            <span class="pill">+2 per ace</span>
+            <span class="pill">+10 straight-sets win</span>
+            <span class="pill">+20 upset win</span>
+            <span class="pill">-2 per double fault</span>
+            <span class="pill">-20 upset loss</span>
+          </div>
+          <div class="section-title">Best Week 3 Angles</div>
+          <ul>
+            <li>Start with at least one true title anchor.</li>
+            <li>Treat Madrid as faster clay, not generic clay.</li>
+            <li>Use live-ranking prices to hunt for young-player value.</li>
+            <li>Be ready to fade famous names if the draw packs their quarter.</li>
+          </ul>
+        </article>
+        <aside class="card">
+          <h2>Amazing Stats To Know</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Jannik Sinner</span>
+                      <p>Sinner carried a <strong>21-match winning streak at Masters 1000 level</strong> into the Monte-Carlo final weekend and became just the <strong>fourth man</strong> to reach the first three Masters 1000 finals of a season, according to ATP.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Carlos Alcaraz</span>
+                      <p>ATP’s Madrid entry story notes that Alcaraz owns a <strong>15-2 record in Madrid</strong>. Home-court history is not everything in fantasy, but that is exactly the sort of event-specific edge that justifies elite pricing.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Casper Ruud</span>
+                      <p>Ruud returns to Madrid as the <strong>defending champion</strong> after claiming the first ATP Masters 1000 title of his career there in 2025. That matters because Madrid has already proven it can reward his clay patterns over a full two-week run.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Fonseca and Tien</span>
+                      <p>Former Next Gen ATP Finals champions <strong>Joao Fonseca</strong> and <strong>Learner Tien</strong> are both in the field. In ranking-based fantasy pricing, that is exactly the profile to watch for underpriced upside.</p>
+                    </div>
+                  </div>
+        </aside>
+      </section>
+
+<section class="grid">
+        <article class="card">
+          <h2>Bonus Ball Board</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">1. Carlos Alcaraz</span>
+                      <p>Until the draw says otherwise, Alcaraz is the default Week 3 Bonus Ball. He combines the best Madrid-specific record with home-soil comfort and the strongest pre-draw title case on the board.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">2. Jannik Sinner</span>
+                      <p>Sinner’s Masters floor is currently unmatched, and Madrid is another event where his baseline control can erase most of the field. The only real caution is workload if Monte-Carlo goes the distance.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">3. Alexander Zverev</span>
+                      <p>Zverev has the kind of serve-plus-first-ball profile that plays well in Madrid altitude, and he already owns a title here. He is the early alternative if you want a high-end anchor outside the obvious Alcaraz/Sinner construction.</p>
+                    </div>
+                  </div>
+        </article>
+        <aside class="card">
+          <h2>Core Plays</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Carlos Alcaraz</span>
+                      <p>The best combination of event history, ceiling and likely ownership. If his quarter is not overloaded, he stays central to Week 3 builds.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Jannik Sinner</span>
+                      <p>Even on clay, Sinner is still giving fantasy managers the cleanest elite floor because he wins service games efficiently and rarely leaks points in ugly patches.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Andrey Rublev</span>
+                      <p>Rublev is one of the better ranking-based buy candidates before the draw. Madrid’s conditions suit his first-strike pattern, and former-champion status gives him more real upside here than the market often prices.</p>
+                    </div>
+                  </div>
+        </aside>
+      </section>
+
+<section class="grid">
+        <article class="card">
+          <h2>Value Targets</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Joao Fonseca</span>
+                      <p>Fonseca remains the cleanest upside value archetype in ATP Fantasy. His ranking still trails his actual threat level on big stages, and Madrid’s conditions can amplify his serve-plus-forehand damage.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Learner Tien</span>
+                      <p>Tien is the kind of player who can be mispriced simply because the market is still catching up. If he lands away from the elite traffic, he becomes a real roster consideration.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Ben Shelton</span>
+                      <p>Madrid is one of the few clay stops where Shelton’s ace profile can carry genuine weekly value. If his draw is not packed with elite returners, the scoring format can do the rest.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Alexander Zverev</span>
+                      <p>If ATP Fantasy prices Zverev closer to rank than to Madrid-specific win equity, he will end up in the value conversation even at the high end. Not cheap, but potentially underbought relative to championship odds.</p>
+                    </div>
+                  </div>
+        </article>
+        <aside class="card">
+          <h2>Trap List</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Casper Ruud at full defending-champion tax</span>
+                      <p>The Madrid title run is real, but fantasy is about this week’s path and price, not last year’s points. If Ruud is priced aggressively and his draw is crowded, he can become an easy overpay.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Novak Djokovic without draw clarity</span>
+                      <p>Djokovic always carries ceiling, but the pre-draw version of Madrid is exactly where brand-name gravity can outrun actual lineup value. Quarter placement matters too much to lock him blindly.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Anyone arriving heavy from Barcelona or Munich</span>
+                      <p>Back-to-back clay weeks can flip from momentum to fatigue quickly. If a player goes deep in Week 2 and then lands a rough Madrid opener, the risk profile changes immediately.</p>
+                    </div>
+                  </div>
+        </aside>
+      </section>
+      <section class="card" style="margin-top: 22px;">
+        <div class="footer-note">Drafted on <strong>12 April 2026</strong> using official ATP Madrid field information. Keep this page as a local draft until you are ready to publish Week 3, then update it again once the official draw is released.</div>
+      </section>
+    </main>
+    <script>
+      (function () {
+        var slug = "2026-week-3-pre-draw";
+        function sendHeight() {
+          if (window.parent === window) return;
+          var height = Math.max(
+            document.body ? document.body.scrollHeight : 0,
+            document.documentElement ? document.documentElement.scrollHeight : 0
+          );
+          window.parent.postMessage({ type: "ta-fantasy-height", slug: slug, height: height }, "*");
+        }
+        if ("ResizeObserver" in window) {
+          var observer = new ResizeObserver(sendHeight);
+          observer.observe(document.body);
+        }
+        window.addEventListener("load", sendHeight);
+        window.addEventListener("resize", sendHeight);
+        setTimeout(sendHeight, 150);
+        setTimeout(sendHeight, 600);
+      })();
+    </script>
+  </body>
+</html>

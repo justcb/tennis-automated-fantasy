@@ -17,8 +17,9 @@ This folder now supports repeatable weekly ATP Fantasy cheat sheets from structu
 1. Copy an existing week JSON file in `data/`.
 2. Update the hero copy, tournament lens, stats, and pick sections.
 3. Set the output filename in the JSON.
-4. Rebuild the page.
-5. Deploy the contents of `dist/` to static hosting.
+4. If the page is only a future scaffold, set `publish.draft` to `true`.
+5. Rebuild the page.
+6. Deploy the contents of `dist/` to static hosting.
 
 ## Build
 
@@ -58,11 +59,16 @@ Each week JSON file includes:
 
 Exactly one file should have `publish.live = true`.
 
+If a future week should exist locally but stay out of Netlify and the public archive, add:
+
+- `publish.draft = true`
+
 Recommended pattern:
 
 - Monday pre-draw file becomes live.
 - Saturday draw-update file is published as a new version and becomes live.
 - The previous file stays in the archive.
+- Future scaffolds stay local as drafts until you are ready to publish them.
 
 ## Squarespace
 

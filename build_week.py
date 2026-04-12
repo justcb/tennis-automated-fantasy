@@ -604,6 +604,8 @@ def validate_week_data(data: dict[str, Any], source_path: Path) -> None:
     for key in publish_required:
         if key not in data["publish"]:
             raise ValueError(f"{source_path.name}: missing publish.{key}")
+    if "draft" in data["publish"] and not isinstance(data["publish"]["draft"], bool):
+        raise ValueError(f"{source_path.name}: publish.draft must be true or false")
 
 
 def load_weeks(paths: list[Path]) -> list[dict[str, Any]]:
@@ -616,6 +618,10 @@ def load_weeks(paths: list[Path]) -> list[dict[str, Any]]:
     return pages
 
 
+def is_draft(page: dict[str, Any]) -> bool:
+    return bool(page["publish"].get("draft", False))
+
+
 def ensure_publish_targets(pages: list[dict[str, Any]]) -> None:
     filenames = {}
     live_pages = []
@@ -624,6 +630,10 @@ def ensure_publish_targets(pages: list[dict[str, Any]]) -> None:
         if filename in filenames:
             raise ValueError(f"Duplicate publish filename: {filename}")
         filenames[filename] = page["_source_path"]
+        if is_draft(page):
+            if page["publish"]["live"]:
+                raise ValueError(f"{page['_source_path'].name}: draft pages cannot have publish.live=true")
+            continue
         if page["publish"]["live"]:
             live_pages.append(page)
     if len(live_pages) != 1:
@@ -645,25 +655,31 @@ def build_pages(pages: list[dict[str, Any]], config: dict[str, Any]) -> list[dic
         local_output = BASE_DIR / page["output"]
         local_output.write_text(html)
 
-        publish_filename = page["publish"]["filename"]
-        dist_output = PAGES_DIR / publish_filename
-        dist_output.write_text(html)
+        dist_output: Path | None = None
+        relative_url: str | None = None
+        public_url: str | None = None
+        if not is_draft(page):
+            publish_filename = page["publish"]["filename"]
+            dist_output = PAGES_DIR / publish_filename
+            dist_output.write_text(html)
+            relative_url = f"/pages/{publish_filename}"
+            public_url = absolute_url(config["public_base_url"], relative_url)
 
-        relative_url = f"/pages/{publish_filename}"
         built_pages.append(
             {
                 **page,
                 "local_output": str(local_output),
-                "dist_output": str(dist_output),
+                "dist_output": str(dist_output) if dist_output else None,
                 "relative_url": relative_url,
-                "public_url": absolute_url(config["public_base_url"], relative_url),
+                "public_url": public_url,
             }
         )
     return built_pages
 
 
 def build_latest_manifest(config: dict[str, Any], built_pages: list[dict[str, Any]]) -> dict[str, Any]:
-    current = next(page for page in built_pages if page["publish"]["live"])
+    published_pages = [page for page in built_pages if not is_draft(page)]
+    current = next(page for page in published_pages if page["publish"]["live"])
     manifest = {
         "site_title": config["site_title"],
         "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -682,7 +698,8 @@ def build_latest_manifest(config: dict[str, Any], built_pages: list[dict[str, An
 
 def build_archive_manifest(built_pages: list[dict[str, Any]]) -> None:
     archive = []
-    for page in sorted(built_pages, key=lambda item: item["publish"]["updated_at"], reverse=True):
+    published_pages = [page for page in built_pages if not is_draft(page)]
+    for page in sorted(published_pages, key=lambda item: item["publish"]["updated_at"], reverse=True):
         archive.append(
             {
                 "week": page["publish"]["week"],
@@ -698,7 +715,11 @@ def build_archive_manifest(built_pages: list[dict[str, Any]]) -> None:
 
 
 def build_archive_index(config: dict[str, Any], built_pages: list[dict[str, Any]]) -> None:
-    ordered = sorted(built_pages, key=lambda item: item["publish"]["updated_at"], reverse=True)
+    ordered = sorted(
+        [page for page in built_pages if not is_draft(page)],
+        key=lambda item: item["publish"]["updated_at"],
+        reverse=True,
+    )
     (DIST_DIR / "index.html").write_text(render_archive_index(config, ordered))
 
 
@@ -743,7 +764,8 @@ def main(argv: list[str]) -> int:
     built_pages = build_all(paths)
     for page in built_pages:
         print(f"built {page['local_output']}")
-        print(f"published {page['dist_output']}")
+        if page["dist_output"]:
+            print(f"published {page['dist_output']}")
     print(f"wrote {MANIFEST_DIR / 'latest.json'}")
     print(f"wrote {DIST_DIR / 'index.html'}")
     print(f"wrote {BASE_DIR / 'squarespace-code-block.html'}")
