@@ -115,6 +115,7 @@ The build generates current announcement copy for:
 If no Buffer key is configured, it falls back to `SOCIAL_WEBHOOK_URL`.
 
 The script stores a local dedupe log in `.automation-state/` so the same page version is not announced twice.
+If only X is connected in Buffer, the script will still post to X and skip Instagram without failing.
 
 Recommended production path:
 

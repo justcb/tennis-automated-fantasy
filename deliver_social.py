@@ -150,11 +150,12 @@ def deliver_via_buffer(payload: dict[str, Any], force: bool) -> bool:
 
     if not x_channel:
         raise SystemExit("buffer setup error: could not resolve X channel; set BUFFER_X_CHANNEL_ID")
-    if not instagram_channel:
-        raise SystemExit("buffer setup error: could not resolve Instagram channel; set BUFFER_INSTAGRAM_CHANNEL_ID")
 
     create_buffer_post(api_key, payload["x_text"], x_channel["id"], "shareNow")
-    create_buffer_post(api_key, payload["instagram_caption"], instagram_channel["id"], "shareNow", payload["image_url"])
+    if instagram_channel:
+        create_buffer_post(api_key, payload["instagram_caption"], instagram_channel["id"], "shareNow", payload["image_url"])
+    else:
+        print("skip: no Instagram channel connected in Buffer")
     return True
 
 
