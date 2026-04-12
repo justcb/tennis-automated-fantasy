@@ -7,12 +7,14 @@ import sys
 import urllib.error
 import urllib.request
 from pathlib import Path
+from typing import Any
 
 
 BASE_DIR = Path(__file__).resolve().parent
 SOCIAL_PAYLOAD_PATH = BASE_DIR / "dist" / "social" / "latest.json"
 STATE_DIR = BASE_DIR / ".automation-state"
 STATE_PATH = STATE_DIR / "social-delivery-log.json"
+BUFFER_API_URL = "https://api.buffer.com"
 
 
 def load_json(path: Path) -> dict:
@@ -30,12 +32,134 @@ def save_state(state: dict) -> None:
     STATE_PATH.write_text(json.dumps(state, indent=2) + "\n")
 
 
+def post_json(url: str, payload: dict, headers: dict[str, str]) -> tuple[int, str]:
+    request = urllib.request.Request(
+        url,
+        data=json.dumps(payload).encode("utf-8"),
+        headers=headers,
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return response.status, response.read(2000).decode("utf-8", "ignore")
+    except urllib.error.HTTPError as exc:
+        body = exc.read(2000).decode("utf-8", "ignore")
+        raise SystemExit(f"request error {exc.code}: {body}") from exc
+
+
+def buffer_graphql(api_key: str, query: str) -> dict[str, Any]:
+    status, body = post_json(
+        BUFFER_API_URL,
+        {"query": query},
+        {
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {api_key}",
+        },
+    )
+    if status < 200 or status >= 300:
+        raise SystemExit(f"buffer error {status}: {body}")
+    payload = json.loads(body)
+    if payload.get("errors"):
+        raise SystemExit(f"buffer graphql error: {payload['errors']}")
+    return payload
+
+
+def get_buffer_channels(api_key: str) -> list[dict[str, Any]]:
+    org_query = """
+    query GetOrganizations {
+      account {
+        organizations {
+          id
+          name
+        }
+      }
+    }
+    """
+    organizations = buffer_graphql(api_key, org_query)["data"]["account"]["organizations"]
+    channels: list[dict[str, Any]] = []
+    for org in organizations:
+        channel_query = f"""
+        query GetChannels {{
+          channels(input: {{ organizationId: "{org['id']}" }}) {{
+            id
+            name
+            service
+          }}
+        }}
+        """
+        for channel in buffer_graphql(api_key, channel_query)["data"]["channels"]:
+            channels.append({**channel, "organizationId": org["id"], "organizationName": org["name"]})
+    return channels
+
+
+def select_channel(channels: list[dict[str, Any]], service_names: set[str], env_id: str) -> dict[str, Any] | None:
+    explicit_id = os.environ.get(env_id)
+    if explicit_id:
+        return next((channel for channel in channels if channel["id"] == explicit_id), None)
+    matches = [channel for channel in channels if channel["service"] in service_names]
+    if len(matches) == 1:
+        return matches[0]
+    return None
+
+
+def create_buffer_post(api_key: str, text: str, channel_id: str, mode: str, image_url: str | None = None) -> None:
+    assets_block = ""
+    if image_url:
+        assets_block = f"""
+        assets: {{
+          images: [
+            {{
+              url: "{image_url}"
+            }}
+          ]
+        }}
+        """
+    mutation = f"""
+    mutation CreatePost {{
+      createPost(input: {{
+        text: {json.dumps(text)}
+        channelId: "{channel_id}"
+        schedulingType: automatic
+        mode: {mode}
+        {assets_block}
+      }}) {{
+        ... on PostActionSuccess {{
+          post {{
+            id
+          }}
+        }}
+        ... on MutationError {{
+          message
+        }}
+      }}
+    }}
+    """
+    payload = buffer_graphql(api_key, mutation)["data"]["createPost"]
+    if payload.get("message"):
+        raise SystemExit(f"buffer createPost error: {payload['message']}")
+
+
+def deliver_via_buffer(payload: dict[str, Any], force: bool) -> bool:
+    api_key = os.environ.get("BUFFER_API_KEY")
+    if not api_key:
+        return False
+
+    channels = get_buffer_channels(api_key)
+    x_channel = select_channel(channels, {"twitter", "x"}, "BUFFER_X_CHANNEL_ID")
+    instagram_channel = select_channel(channels, {"instagram"}, "BUFFER_INSTAGRAM_CHANNEL_ID")
+
+    if not x_channel:
+        raise SystemExit("buffer setup error: could not resolve X channel; set BUFFER_X_CHANNEL_ID")
+    if not instagram_channel:
+        raise SystemExit("buffer setup error: could not resolve Instagram channel; set BUFFER_INSTAGRAM_CHANNEL_ID")
+
+    create_buffer_post(api_key, payload["x_text"], x_channel["id"], "shareNow")
+    create_buffer_post(api_key, payload["instagram_caption"], instagram_channel["id"], "shareNow", payload["image_url"])
+    return True
+
+
 def main(argv: list[str]) -> int:
     force = "--force" in argv[1:]
-    webhook = os.environ.get("SOCIAL_WEBHOOK_URL")
-    if not webhook:
-        print("skip: SOCIAL_WEBHOOK_URL is not configured")
-        return 0
 
     payload = load_json(SOCIAL_PAYLOAD_PATH)
     delivery_key = payload["post_key"]
@@ -45,30 +169,31 @@ def main(argv: list[str]) -> int:
         print(f"skip: {delivery_key} already delivered")
         return 0
 
-    request = urllib.request.Request(
-        webhook,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            status = response.status
-            body = response.read(400).decode("utf-8", "ignore")
-    except urllib.error.HTTPError as exc:
-        body = exc.read(400).decode("utf-8", "ignore")
-        raise SystemExit(f"webhook error {exc.code}: {body}") from exc
+    delivered_now = False
+    if deliver_via_buffer(payload, force):
+        delivered_now = True
+    else:
+        webhook = os.environ.get("SOCIAL_WEBHOOK_URL")
+        if not webhook:
+            print("skip: neither BUFFER_API_KEY nor SOCIAL_WEBHOOK_URL is configured")
+            return 0
+        status, body = post_json(
+            webhook,
+            payload,
+            {"Content-Type": "application/json"},
+        )
+        if status < 200 or status >= 300:
+            raise SystemExit(f"webhook error {status}: {body}")
+        delivered_now = True
 
-    if status < 200 or status >= 300:
-        raise SystemExit(f"webhook error {status}: {body}")
-
-    delivered[delivery_key] = {
-        "week": payload["week"],
-        "label": payload["label"],
-        "updated_at": payload["updated_at"],
-    }
-    save_state(state)
-    print(f"delivered {delivery_key}")
+    if delivered_now:
+        delivered[delivery_key] = {
+            "week": payload["week"],
+            "label": payload["label"],
+            "updated_at": payload["updated_at"],
+        }
+        save_state(state)
+        print(f"delivered {delivery_key}")
     return 0
 
 

@@ -6,7 +6,8 @@ This folder now supports repeatable weekly ATP Fantasy cheat sheets from structu
 
 - `build_week.py`: builds one or more weekly pages
 - `publish_week.py`: promotes a chosen week file live and rebuilds output
-- `deliver_social.py`: sends the current social payload to a webhook with dedupe
+- `deliver_social.py`: sends the current social payload to Buffer or a webhook with dedupe
+- `buffer_channels.py`: lists connected Buffer channels from `BUFFER_API_KEY`
 - `data/week-2.json`: Week 2 content source
 - `week-2.html`: generated customer-facing page
 - `dist/`: publish-ready static output for hosting
@@ -50,6 +51,13 @@ SOCIAL_WEBHOOK_URL="https://hooks.example.com/..." \
 python3 /Users/studio/tennis-automated-fantasy/deliver_social.py
 ```
 
+List the Buffer channels available to the API key:
+
+```bash
+BUFFER_API_KEY="..." \
+python3 /Users/studio/tennis-automated-fantasy/buffer_channels.py
+```
+
 ## Publish Output
 
 The build writes:
@@ -62,6 +70,7 @@ The build writes:
 - `dist/social/latest.json`
 - `dist/social/latest-x.txt`
 - `dist/social/latest-instagram.txt`
+- `dist/social/latest-instagram-card.png`
 
 `latest.json` is the live pointer that Squarespace should load.
 `dist/social/latest.json` is the machine-readable announcement payload for the current live page.
@@ -95,17 +104,29 @@ The build generates current announcement copy for:
 
 - X in `dist/social/latest-x.txt`
 - Instagram in `dist/social/latest-instagram.txt`
+- Instagram image in `dist/social/latest-instagram-card.png`
 - webhook automation in `dist/social/latest.json`
 
-`deliver_social.py` posts that JSON payload to `SOCIAL_WEBHOOK_URL` and stores a local dedupe log in `.automation-state/` so the same page version is not announced twice.
+`deliver_social.py` first tries native Buffer posting when `BUFFER_API_KEY` is configured. It auto-discovers channels when there is only one X channel and one Instagram channel on the account. If there are multiple, set:
+
+- `BUFFER_X_CHANNEL_ID`
+- `BUFFER_INSTAGRAM_CHANNEL_ID`
+
+If no Buffer key is configured, it falls back to `SOCIAL_WEBHOOK_URL`.
+
+The script stores a local dedupe log in `.automation-state/` so the same page version is not announced twice.
 
 Recommended production path:
 
 1. Connect X and Instagram to Buffer.
-2. Use Zapier or Make to receive `dist/social/latest.json`.
-3. Have that workflow create posts in Buffer for both channels.
+2. Set `BUFFER_API_KEY` for the automation runtime.
+3. If needed, set `BUFFER_X_CHANNEL_ID` and `BUFFER_INSTAGRAM_CHANNEL_ID`.
+4. Let `deliver_social.py` post directly.
 
-This is more robust than direct browser automation and avoids maintaining separate X and Instagram API integrations inside this repo.
+Fallback path:
+
+1. Use Zapier or Make to receive `dist/social/latest.json`.
+2. Have that workflow create posts in Buffer for both channels.
 
 ## Squarespace
 

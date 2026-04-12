@@ -9,6 +9,8 @@ from html import escape
 from pathlib import Path
 from typing import Any
 
+from PIL import Image, ImageDraw, ImageFont
+
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR / "data"
@@ -618,6 +620,90 @@ def extract_bonus_ball_names(page: dict[str, Any]) -> list[str]:
     return names
 
 
+def extract_meta_value(page: dict[str, Any], label: str) -> str | None:
+    for item in page.get("meta", []):
+        if item.get("label") == label:
+            return item.get("value")
+    return None
+
+
+def wrap_text(text: str, font: ImageFont.FreeTypeFont, max_width: int) -> list[str]:
+    words = text.split()
+    lines: list[str] = []
+    current = ""
+    for word in words:
+        candidate = word if not current else f"{current} {word}"
+        if font.getlength(candidate) <= max_width:
+            current = candidate
+        else:
+            if current:
+                lines.append(current)
+            current = word
+    if current:
+        lines.append(current)
+    return lines
+
+
+def build_social_card(config: dict[str, Any], current: dict[str, Any], bonus_names: list[str]) -> str:
+    SOCIAL_DIR.mkdir(exist_ok=True)
+    width = 1080
+    height = 1080
+    image = Image.new("RGB", (width, height), "#11211d")
+    draw = ImageDraw.Draw(image)
+
+    accent = "#c65a18"
+    accent_2 = "#1d6b52"
+    paper = "#fffaf2"
+    muted = "#d9d0c2"
+
+    draw.rectangle((54, 54, width - 54, height - 54), outline="#30463f", width=4)
+    draw.ellipse((760, -120, 1210, 330), fill="#1b4335")
+    draw.ellipse((720, 720, 1120, 1120), fill="#7a360f")
+    draw.rectangle((88, 88, 300, 128), fill=accent)
+
+    title_font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Georgia.ttf", 84)
+    h2_font = ImageFont.truetype("/System/Library/Fonts/Supplemental/GillSans.ttc", 42)
+    body_font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 34)
+    small_font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 24)
+
+    draw.text((110, 94), "Tennis Automated", font=small_font, fill=paper)
+    draw.text((110, 170), current["publish"]["week"], font=h2_font, fill=muted)
+
+    title_lines = wrap_text(current["publish"]["label"], title_font, 760)
+    y = 220
+    for line in title_lines[:3]:
+        draw.text((110, y), line, font=title_font, fill=paper)
+        y += 92
+
+    dek = strip_html(current["dek"])
+    dek_lines = wrap_text(dek, body_font, 840)[:4]
+    y += 18
+    for line in dek_lines:
+        draw.text((110, y), line, font=body_font, fill=muted)
+        y += 44
+
+    draw.rounded_rectangle((110, 620, width - 110, 880), radius=34, fill=paper)
+    draw.text((148, 650), "Bonus Ball Board", font=h2_font, fill=accent_2)
+    by = 720
+    for idx, name in enumerate(bonus_names[:3], start=1):
+        draw.text((148, by), f"{idx}. {name}", font=body_font, fill="#11211d")
+        by += 54
+
+    slate = extract_meta_value(current, "Slate") or ""
+    surface = extract_meta_value(current, "Surface") or ""
+    footer = " | ".join(part for part in [slate, surface] if part)
+    draw.text((110, 940), footer, font=small_font, fill=muted)
+    draw.text((110, 975), config["public_base_url"], font=small_font, fill=paper)
+
+    filename = current["publish"]["filename"].removesuffix(".html") + ".png"
+    output_path = SOCIAL_DIR / filename
+    image.save(output_path, format="PNG")
+
+    latest_path = SOCIAL_DIR / "latest-instagram-card.png"
+    image.save(latest_path, format="PNG")
+    return absolute_url(config["public_base_url"], f"/social/{filename}")
+
+
 def build_social_payload(config: dict[str, Any], current: dict[str, Any]) -> dict[str, Any]:
     SOCIAL_DIR.mkdir(exist_ok=True)
     url = current["public_url"]
@@ -628,6 +714,7 @@ def build_social_payload(config: dict[str, Any], current: dict[str, Any]) -> dic
     dek_text = strip_html(current["dek"])
     source = str(current["_source_path"].relative_to(BASE_DIR))
     post_key = current["publish"]["filename"].removesuffix(".html")
+    image_url = build_social_card(config, current, bonus_names)
 
     x_lines = [
         f"{week} is live: {label}.",
@@ -664,6 +751,7 @@ def build_social_payload(config: dict[str, Any], current: dict[str, Any]) -> dic
         "label": label,
         "updated_at": current["publish"]["updated_at"],
         "url": url,
+        "image_url": image_url,
         "source": source,
         "x_text": x_text,
         "instagram_caption": instagram_caption,
