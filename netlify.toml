@@ -1,3 +1,11 @@
 [build]
 publish = "dist"
 command = "python3 build_week.py"
+
+[functions]
+directory = "netlify/functions"
+
+[[redirects]]
+from = "/api/social-relay"
+to = "/.netlify/functions/social-relay"
+status = 200

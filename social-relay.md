@@ -2,6 +2,11 @@
 
 Use a webhook relay as the primary social delivery path.
 
+In this repo, the relay is implemented as a Netlify Function at:
+
+- `netlify/functions/social-relay.mjs`
+- public path `/api/social-relay`
+
 ## Why
 
 - publishing stays in this repo
@@ -53,6 +58,25 @@ Recommended relay behavior:
 3. send `x_text` to the X publishing step
 4. send `instagram_caption` plus `image_url` to the Instagram publishing step
 5. log success or failure by `post_key`
+
+The Netlify implementation stores dedupe records in the Blobs store:
+
+- store name: `social-relay`
+- key pattern: `delivered:<post_key>`
+
+## Netlify Environment Variables
+
+Required:
+
+- `BUFFER_API_KEY`
+- `SOCIAL_WEBHOOK_SECRET`
+
+Optional:
+
+- `BUFFER_X_CHANNEL_ID`
+- `BUFFER_INSTAGRAM_CHANNEL_ID`
+
+If only one X channel is connected in Buffer, the relay auto-discovers it. If no Instagram channel is connected, the relay skips Instagram and still posts to X.
 
 ## Practical Targets
 

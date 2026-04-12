@@ -48,7 +48,7 @@ python3 /Users/studio/tennis-automated-fantasy/publish_week.py /Users/studio/ten
 Deliver the generated social payload to your webhook:
 
 ```bash
-SOCIAL_WEBHOOK_URL="https://hooks.example.com/..." \
+SOCIAL_WEBHOOK_URL="https://tennis-automated-fantasy.netlify.app/api/social-relay" \
 SOCIAL_WEBHOOK_SECRET="shared-secret" \
 python3 /Users/studio/tennis-automated-fantasy/deliver_social.py
 ```
@@ -117,6 +117,12 @@ Preferred production path:
 
 `deliver_social.py` signs outbound webhook requests when `SOCIAL_WEBHOOK_SECRET` is set.
 
+Netlify relay path in this repo:
+
+- endpoint: `/api/social-relay`
+- function source: `netlify/functions/social-relay.mjs`
+- dedupe store: Netlify Blobs store `social-relay`
+
 Direct Buffer fallback:
 
 `deliver_social.py` can also try native Buffer posting when `BUFFER_API_KEY` is configured. It auto-discovers channels when there is only one X channel and one Instagram channel on the account. If there are multiple, set:
@@ -132,7 +138,7 @@ If only X is connected in Buffer, the script will still post to X and skip Insta
 Recommended production path:
 
 1. Build and publish the cheat sheet from this repo.
-2. Send `dist/social/latest.json` to your webhook relay with `deliver_social.py`.
+2. Send `dist/social/latest.json` to the Netlify relay with `deliver_social.py`.
 3. Have the relay verify the signature, dedupe on `post_key`, and post to social.
 4. Let Buffer or native platform integrations live only in the relay.
 
@@ -148,6 +154,13 @@ Paste the contents of `squarespace-code-block.html` into a Squarespace Code Bloc
 ## Hosting
 
 `netlify.toml` is included for Netlify. Point the site at this folder/repo and publish `dist/`.
+
+For the relay function, add these Netlify environment variables:
+
+- `BUFFER_API_KEY`
+- `SOCIAL_WEBHOOK_SECRET`
+- optional `BUFFER_X_CHANNEL_ID`
+- optional `BUFFER_INSTAGRAM_CHANNEL_ID`
 
 ## Content Schema
 
