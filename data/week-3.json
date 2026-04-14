@@ -2,12 +2,24 @@
   "page_title": "Tennis Automated | ATP Fantasy Week 3",
   "eyebrow": "Tennis Automated | ATP Fantasy | Week 3 Pre-Draw",
   "headline": "Week 3 Cheat Sheet",
-  "dek": "Pre-draw edition for <strong>20-26 April 2026</strong>. Week 3 moves to a standalone <strong>Madrid ATP Masters 1000</strong> slate, which changes the build entirely: deep-run equity matters more, the altitude keeps ace upside relevant, and the edge comes from identifying which elite names still have a clean path once the bracket lands.",
+  "dek": "Pre-draw edition for <strong>20-26 April 2026</strong>. Week 3 moves to a standalone <strong>Madrid ATP Masters 1000</strong> slate, which changes the build entirely: deep-run equity matters more, the altitude keeps ace upside relevant, and the edge comes from identifying which elite names can convert Monte-Carlo form into another deep run once the Madrid bracket lands.",
   "meta": [
-    { "label": "Week Window", "value": "20-26 April" },
-    { "label": "Slate", "value": "Madrid only" },
-    { "label": "Surface", "value": "Clay altitude" },
-    { "label": "Key Date", "value": "Event starts: 22 Apr" }
+    {
+      "label": "Week Window",
+      "value": "20-26 April"
+    },
+    {
+      "label": "Slate",
+      "value": "Madrid only"
+    },
+    {
+      "label": "Surface",
+      "value": "Clay altitude"
+    },
+    {
+      "label": "Key Date",
+      "value": "Event starts: 22 Apr"
+    }
   ],
   "blocks": [
     {
@@ -16,7 +28,7 @@
       "columns": [
         {
           "heading": "Top Of Board",
-          "body": "Madrid’s official entry list says the field will feature <strong>all current Top 10 players</strong> in the PIF ATP Rankings. <strong>Carlos Alcaraz</strong> is a two-time Madrid champion, <strong>Jannik Sinner</strong> is a two-time finalist, <strong>Novak Djokovic</strong> is a three-time titlist, and <strong>Casper Ruud</strong> returns as defending champion after lifting the biggest trophy of his career here in 2025. Former champions <strong>Alexander Zverev</strong> and <strong>Andrey Rublev</strong> are also in the field.",
+          "body": "Madrid\u2019s official entry list says the field will feature <strong>all current Top 10 players</strong> in the PIF ATP Rankings. <strong>Carlos Alcaraz</strong> is a two-time Madrid champion, <strong>Jannik Sinner</strong> is a two-time finalist, <strong>Novak Djokovic</strong> is a three-time titlist, and <strong>Casper Ruud</strong> returns as defending champion after lifting the biggest trophy of his career here in 2025. Former champions <strong>Alexander Zverev</strong> and <strong>Andrey Rublev</strong> are also in the field.",
           "bullets": [
             "Best raw ceiling: Alcaraz",
             "Best recent Masters form: Sinner",
@@ -63,23 +75,23 @@
         },
         {
           "kind": "pick-list",
-          "title": "Amazing Stats To Know",
+          "title": "Last Week's Top Performers",
           "items": [
             {
-              "tag": "Jannik Sinner",
-              "body": "Sinner carried a <strong>21-match winning streak at Masters 1000 level</strong> into the Monte-Carlo final weekend and became just the <strong>fourth man</strong> to reach the first three Masters 1000 finals of a season, according to ATP."
+              "tag": "Best scorer: Jannik Sinner",
+              "body": "Sinner won Monte-Carlo without letting the title-stage pressure derail him, beating Carlos Alcaraz in the final to claim his <strong>first clay-court Masters 1000 trophy</strong>. ATP also noted that he became only the <strong>second man</strong> after Novak Djokovic in 2015 to win the first three Masters 1000 events of a season, and he carries a <strong>22-match Masters 1000 win streak</strong> into Madrid."
             },
             {
-              "tag": "Carlos Alcaraz",
-              "body": "ATP’s Madrid entry story notes that Alcaraz owns a <strong>15-2 record in Madrid</strong>. Home-court history is not everything in fantasy, but that is exactly the sort of event-specific edge that justifies elite pricing."
+              "tag": "Best elite floor: Carlos Alcaraz",
+              "body": "Alcaraz did not lift the Monte-Carlo trophy, but he still made the final and handled Valentin Vacherot\u2019s home-crowd semifinal challenge in straight sets. ATP\u2019s Madrid entry story also notes that he owns a <strong>15-2 record in Madrid</strong>, which is exactly why he stays near the top of the Week 3 board despite the Monte-Carlo final loss."
             },
             {
-              "tag": "Casper Ruud",
-              "body": "Ruud returns to Madrid as the <strong>defending champion</strong> after claiming the first ATP Masters 1000 title of his career there in 2025. That matters because Madrid has already proven it can reward his clay patterns over a full two-week run."
+              "tag": "Best outperformer: Valentin Vacherot",
+              "body": "Vacherot was the biggest fantasy overperformer of the week. ATP reported that he beat <strong>Lorenzo Musetti</strong> and <strong>Alex de Minaur</strong> en route to the Monte-Carlo semi-finals, became the <strong>first Monegasque player</strong> to reach that stage in the Principality, and climbed to <strong>No. 17 in the live rankings</strong>."
             },
             {
-              "tag": "Fonseca and Tien",
-              "body": "Former Next Gen ATP Finals champions <strong>Joao Fonseca</strong> and <strong>Learner Tien</strong> are both in the field. In ranking-based fantasy pricing, that is exactly the profile to watch for underpriced upside."
+              "tag": "Best under-the-radar carryover: Andrey Rublev",
+              "body": "Rublev remains one of the more interesting Week 3 names because Madrid amplifies his first-strike style more than slower clay stops do. He did not dominate the Monte-Carlo headlines, which is useful for fantasy because it keeps the focus on the bigger names while his Madrid-specific upside remains intact."
             }
           ]
         }
@@ -98,7 +110,7 @@
             },
             {
               "tag": "2. Jannik Sinner",
-              "body": "Sinner’s Masters floor is currently unmatched, and Madrid is another event where his baseline control can erase most of the field. The only real caution is workload if Monte-Carlo goes the distance."
+              "body": "Sinner\u2019s Masters floor is currently unmatched, and Madrid is another event where his baseline control can erase most of the field. The only real caution is workload if Monte-Carlo goes the distance."
             },
             {
               "tag": "3. Alexander Zverev",
@@ -120,7 +132,7 @@
             },
             {
               "tag": "Andrey Rublev",
-              "body": "Rublev is one of the better ranking-based buy candidates before the draw. Madrid’s conditions suit his first-strike pattern, and former-champion status gives him more real upside here than the market often prices."
+              "body": "Rublev is one of the better ranking-based buy candidates before the draw. Madrid\u2019s conditions suit his first-strike pattern, and former-champion status gives him more real upside here than the market often prices."
             }
           ]
         }
@@ -135,7 +147,7 @@
           "items": [
             {
               "tag": "Joao Fonseca",
-              "body": "Fonseca remains the cleanest upside value archetype in ATP Fantasy. His ranking still trails his actual threat level on big stages, and Madrid’s conditions can amplify his serve-plus-forehand damage."
+              "body": "Fonseca remains the cleanest upside value archetype in ATP Fantasy. His ranking still trails his actual threat level on big stages, and Madrid\u2019s conditions can amplify his serve-plus-forehand damage."
             },
             {
               "tag": "Learner Tien",
@@ -143,7 +155,7 @@
             },
             {
               "tag": "Ben Shelton",
-              "body": "Madrid is one of the few clay stops where Shelton’s ace profile can carry genuine weekly value. If his draw is not packed with elite returners, the scoring format can do the rest."
+              "body": "Madrid is one of the few clay stops where Shelton\u2019s ace profile can carry genuine weekly value. If his draw is not packed with elite returners, the scoring format can do the rest."
             },
             {
               "tag": "Alexander Zverev",
@@ -157,7 +169,7 @@
           "items": [
             {
               "tag": "Casper Ruud at full defending-champion tax",
-              "body": "The Madrid title run is real, but fantasy is about this week’s path and price, not last year’s points. If Ruud is priced aggressively and his draw is crowded, he can become an easy overpay."
+              "body": "The Madrid title run is real, but fantasy is about this week\u2019s path and price, not last year\u2019s points. If Ruud is priced aggressively and his draw is crowded, he can become an easy overpay."
             },
             {
               "tag": "Novak Djokovic without draw clarity",
@@ -172,15 +184,15 @@
       ]
     }
   ],
-  "footer_note": "Drafted on <strong>12 April 2026</strong> using official ATP Madrid field information. Keep this page as a local draft until you are ready to publish Week 3, then update it again once the official draw is released.",
+  "footer_note": "Pre-draw edition updated on <strong>14 April 2026</strong> using official ATP Madrid field information and official Monte-Carlo results.",
   "output": "week-3.html",
   "archive_summary": "Pre-draw ATP Fantasy read for Madrid with early Bonus Ball rankings, Masters-specific angles, and provisional value calls before the official draw.",
   "publish": {
     "filename": "2026-week-3-pre-draw.html",
     "week": "Week 3",
     "label": "Week 3 Pre-Draw Edition",
-    "updated_at": "2026-04-12T11:15:00-05:00",
-    "live": false,
-    "draft": true
+    "updated_at": "2026-04-14T03:27:44-05:00",
+    "live": true,
+    "draft": false
   }
 }

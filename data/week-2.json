@@ -2,12 +2,24 @@
   "page_title": "Tennis Automated | ATP Fantasy Week 2",
   "eyebrow": "Tennis Automated | ATP Fantasy | Week 2 Draw Update",
   "headline": "Week 2 Cheat Sheet",
-  "dek": "The draws are now set for <strong>13-19 April 2026</strong>. Week 2 is no longer just a form week, it is a <strong>path week</strong>: Carlos Alcaraz and Lorenzo Musetti landed with the clearest Barcelona routes, while Munich now hinges on whether you trust Alexander Zverev’s home-court edge more than Ben Shelton’s scoring profile or Joao Fonseca’s upside.",
+  "dek": "The draws are now set for <strong>13-19 April 2026</strong>. Week 2 is no longer just a form week, it is a <strong>path week</strong>: Carlos Alcaraz and Lorenzo Musetti landed with the clearest Barcelona routes, while Munich now hinges on whether you trust Alexander Zverev\u2019s home-court edge more than Ben Shelton\u2019s scoring profile or Joao Fonseca\u2019s upside.",
   "meta": [
-    { "label": "Week Window", "value": "13-19 April" },
-    { "label": "Slate", "value": "Barcelona + Munich" },
-    { "label": "Surface", "value": "Clay only" },
-    { "label": "Key Date", "value": "Draws: 11 April" }
+    {
+      "label": "Week Window",
+      "value": "13-19 April"
+    },
+    {
+      "label": "Slate",
+      "value": "Barcelona + Munich"
+    },
+    {
+      "label": "Surface",
+      "value": "Clay only"
+    },
+    {
+      "label": "Key Date",
+      "value": "Draws: 11 April"
+    }
   ],
   "blocks": [
     {
@@ -57,7 +69,7 @@
           "bullets": [
             "Build around draw clarity first, especially in Barcelona.",
             "Treat Shelton as safer post-draw than several similarly priced clay names.",
-            "Do not ignore Fonseca’s upside, but price in the Tabilo risk immediately.",
+            "Do not ignore Fonseca\u2019s upside, but price in the Tabilo risk immediately.",
             "Fade crowded Barcelona quarters unless the price discount is significant."
           ]
         },
@@ -67,7 +79,7 @@
           "items": [
             {
               "tag": "Jannik Sinner",
-              "body": "Sinner carried a run of <strong>37 consecutive sets won at ATP Masters 1000 level</strong> into Monte-Carlo before Tomas Machac finally took one off him. Even with the streak snapped, he still powered into the last eight, a reminder of what a true fantasy floor looks like when a top player’s draw is manageable."
+              "body": "Sinner carried a run of <strong>37 consecutive sets won at ATP Masters 1000 level</strong> into Monte-Carlo before Tomas Machac finally took one off him. Even with the streak snapped, he still powered into the last eight, a reminder of what a true fantasy floor looks like when a top player\u2019s draw is manageable."
             },
             {
               "tag": "Carlos Alcaraz",
@@ -79,7 +91,7 @@
             },
             {
               "tag": "Joao Fonseca",
-              "body": "Fonseca’s Monte-Carlo quarter-final run pushed him from <strong>No. 40 to No. 35 in the live rankings</strong>, according to ATP’s Munich draw story. That ranking move matters for fantasy because his market value still lags how dangerous he already is on clay."
+              "body": "Fonseca\u2019s Monte-Carlo quarter-final run pushed him from <strong>No. 40 to No. 35 in the live rankings</strong>, according to ATP\u2019s Munich draw story. That ranking move matters for fantasy because his market value still lags how dangerous he already is on clay."
             }
           ]
         }
@@ -102,7 +114,7 @@
             },
             {
               "tag": "3. Alexander Zverev",
-              "body": "Zverev still belongs near the top because Munich remains his home event and he is the most likely champion there. But the draw did not turn him into a free square: Kecmanovic is a real opener, and Munich’s upper section can get messy fast."
+              "body": "Zverev still belongs near the top because Munich remains his home event and he is the most likely champion there. But the draw did not turn him into a free square: Kecmanovic is a real opener, and Munich\u2019s upper section can get messy fast."
             }
           ]
         },
@@ -116,7 +128,7 @@
             },
             {
               "tag": "Lorenzo Musetti",
-              "body": "Musetti’s route is dramatically cleaner now that the bracket is set. The opening two rounds are manageable, and his projected quarter-final is far softer than the top-half traffic around Alcaraz."
+              "body": "Musetti\u2019s route is dramatically cleaner now that the bracket is set. The opening two rounds are manageable, and his projected quarter-final is far softer than the top-half traffic around Alcaraz."
             },
             {
               "tag": "Andrey Rublev",
@@ -135,11 +147,11 @@
           "items": [
             {
               "tag": "Joao Fonseca",
-              "body": "Fonseca is still the best pure upside value on the slate. The draw is not easy because Tabilo leads their head-to-head 2-0, but ATP’s Munich report also notes that Fonseca would then face Michelsen or Rinderknech, both players he has beaten. He remains the kind of player who can smash value in two matches."
+              "body": "Fonseca is still the best pure upside value on the slate. The draw is not easy because Tabilo leads their head-to-head 2-0, but ATP\u2019s Munich report also notes that Fonseca would then face Michelsen or Rinderknech, both players he has beaten. He remains the kind of player who can smash value in two matches."
             },
             {
               "tag": "Valentin Vacherot",
-              "body": "Vacherot being projected as Musetti’s quarter-final opponent tells you how much his level has risen. If ATP Fantasy still prices him closer to his ranking than to his current clay confidence, he is the type of seeded player who can quietly produce a profitable week."
+              "body": "Vacherot being projected as Musetti\u2019s quarter-final opponent tells you how much his level has risen. If ATP Fantasy still prices him closer to his ranking than to his current clay confidence, he is the type of seeded player who can quietly produce a profitable week."
             },
             {
               "tag": "Francisco Cerundolo",
@@ -180,6 +192,6 @@
     "week": "Week 2",
     "label": "Week 2 Draw Update",
     "updated_at": "2026-04-12T10:30:00-05:00",
-    "live": true
+    "live": false
   }
 }

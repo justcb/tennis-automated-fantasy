@@ -2,12 +2,24 @@
   "page_title": "Tennis Automated | ATP Fantasy Week 2",
   "eyebrow": "Tennis Automated | ATP Fantasy | Week 2",
   "headline": "Week 2 Cheat Sheet",
-  "dek": "Pre-draw edition for <strong>13-19 April 2026</strong>. Week 2 shifts to a two-event clay slate with <strong>Barcelona</strong> and <strong>Munich</strong>, which means fantasy decisions get sharper: fewer true ceiling plays, more ranking-based pricing mistakes, and a bigger edge if you react quickly after Saturday’s draw.",
+  "dek": "Pre-draw edition for <strong>13-19 April 2026</strong>. Week 2 shifts to a two-event clay slate with <strong>Barcelona</strong> and <strong>Munich</strong>, which means fantasy decisions get sharper: fewer true ceiling plays, more ranking-based pricing mistakes, and a bigger edge if you react quickly after Saturday\u2019s draw.",
   "meta": [
-    { "label": "Week Window", "value": "13-19 April" },
-    { "label": "Slate", "value": "Barcelona + Munich" },
-    { "label": "Surface", "value": "Clay only" },
-    { "label": "Key Date", "value": "Draws: 11 April" }
+    {
+      "label": "Week Window",
+      "value": "13-19 April"
+    },
+    {
+      "label": "Slate",
+      "value": "Barcelona + Munich"
+    },
+    {
+      "label": "Surface",
+      "value": "Clay only"
+    },
+    {
+      "label": "Key Date",
+      "value": "Draws: 11 April"
+    }
   ],
   "blocks": [
     {
@@ -94,11 +106,11 @@
           "items": [
             {
               "tag": "1. Carlos Alcaraz",
-              "body": "Alcaraz is the cleanest Week 2 ceiling play if his draw is normal. He headlines Barcelona, entered the season as ATP Fantasy’s highest-priced player at <strong>40 credits</strong>, and brought serious clay form into Monte-Carlo. If he lands away from the other Barcelona heavyweights, he is the default Bonus Ball."
+              "body": "Alcaraz is the cleanest Week 2 ceiling play if his draw is normal. He headlines Barcelona, entered the season as ATP Fantasy\u2019s highest-priced player at <strong>40 credits</strong>, and brought serious clay form into Monte-Carlo. If he lands away from the other Barcelona heavyweights, he is the default Bonus Ball."
             },
             {
               "tag": "2. Alexander Zverev",
-              "body": "Zverev is the Munich anchor. He is ATP Fantasy’s No. 3 price at launch and arrives with deep-run equity after reaching the Australian Open, Indian Wells and Miami semis earlier this season. The caveat is that his first clay week in Monte-Carlo looked uneven, so the draw matters more for him than for Alcaraz."
+              "body": "Zverev is the Munich anchor. He is ATP Fantasy\u2019s No. 3 price at launch and arrives with deep-run equity after reaching the Australian Open, Indian Wells and Miami semis earlier this season. The caveat is that his first clay week in Monte-Carlo looked uneven, so the draw matters more for him than for Alcaraz."
             },
             {
               "tag": "3. Alex de Minaur",
@@ -147,7 +159,7 @@
             },
             {
               "tag": "Alexander Bublik",
-              "body": "Bublik is not a safe play, but Munich is exactly where volatility can become leverage. ATP noted he entered Monte-Carlo on an 18-5 clay run dating back to the start of 2025. If he avoids Zverev’s section, he is a real differentiator."
+              "body": "Bublik is not a safe play, but Munich is exactly where volatility can become leverage. ATP noted he entered Monte-Carlo on an 18-5 clay run dating back to the start of 2025. If he avoids Zverev\u2019s section, he is a real differentiator."
             }
           ]
         },
