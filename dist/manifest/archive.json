@@ -1,6 +1,15 @@
 {
   "pages": [
     {
+      "week": "Week 7",
+      "label": "Week 7 Pre-Draw Edition",
+      "updated_at": "2026-04-15T11:55:56-05:00",
+      "relative_url": "/pages/2026-week-7-pre-draw.html",
+      "url": "https://tennis-automated-fantasy.netlify.app/pages/2026-week-7-pre-draw.html",
+      "headline": "Week 7 Cheat Sheet",
+      "source": "data/week-7.json"
+    },
+    {
       "week": "Week 6",
       "label": "Week 6 Pre-Draw Edition",
       "updated_at": "2026-04-15T11:55:00-05:00",
