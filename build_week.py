@@ -23,6 +23,7 @@ DIST_DIR = BASE_DIR / "dist"
 PAGES_DIR = DIST_DIR / "pages"
 MANIFEST_DIR = DIST_DIR / "manifest"
 SOCIAL_DIR = DIST_DIR / "social"
+ARCHIVE_DIR = DIST_DIR / "archive"
 CONFIG_PATH = BASE_DIR / "publish-config.json"
 
 
@@ -879,6 +880,7 @@ def build_pages(pages: list[dict[str, Any]], config: dict[str, Any]) -> list[dic
     DIST_DIR.mkdir(exist_ok=True)
     PAGES_DIR.mkdir(exist_ok=True)
     MANIFEST_DIR.mkdir(exist_ok=True)
+    ARCHIVE_DIR.mkdir(exist_ok=True)
 
     built_pages: list[dict[str, Any]] = []
     for page in pages:
@@ -956,7 +958,17 @@ def build_archive_index(config: dict[str, Any], built_pages: list[dict[str, Any]
         key=lambda item: item["publish"]["updated_at"],
         reverse=True,
     )
-    (DIST_DIR / "index.html").write_text(render_archive_index(config, ordered))
+    (ARCHIVE_DIR / "index.html").write_text(render_archive_index(config, ordered))
+
+
+def build_current_index(config: dict[str, Any], built_pages: list[dict[str, Any]]) -> None:
+    current = next(page for page in built_pages if not is_draft(page) and page["publish"]["live"])
+    root_page = {
+        **current,
+        "relative_url": "/",
+        "public_url": absolute_url(config["public_base_url"], "/"),
+    }
+    (DIST_DIR / "index.html").write_text(render_page(root_page))
 
 
 def write_support_files() -> None:
@@ -969,6 +981,8 @@ def write_support_files() -> None:
         "  Access-Control-Allow-Origin: *\n\n"
         "/pages/*\n"
         "  Cache-Control: public, max-age=31536000, immutable\n\n"
+        "/archive/*\n"
+        "  Cache-Control: public, max-age=300\n\n"
         "/index.html\n"
         "  Cache-Control: public, max-age=300\n"
     )
@@ -983,6 +997,7 @@ def build_all(paths: list[Path]) -> list[dict[str, Any]]:
     built_pages = build_pages(pages, config)
     build_latest_manifest(config, built_pages)
     build_archive_manifest(built_pages)
+    build_current_index(config, built_pages)
     build_archive_index(config, built_pages)
     write_support_files()
     return built_pages
