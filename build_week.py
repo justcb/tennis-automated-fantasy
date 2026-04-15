@@ -514,7 +514,7 @@ def render_squarespace_embed(config: dict[str, Any]) -> str:
         iframe.src = manifest.current.url;
         iframe.title = manifest.current.label || "ATP Fantasy Cheat Sheet";
         iframe.style.width = "100%";
-        iframe.style.minHeight = "2200px";
+        iframe.style.height = "900px";
         iframe.style.border = "0";
         iframe.style.display = "block";
         iframe.style.background = "transparent";
@@ -531,7 +531,7 @@ def render_squarespace_embed(config: dict[str, Any]) -> str:
       if (!iframe || event.source !== iframe.contentWindow) return;
       if (!event.data || event.data.type !== "ta-fantasy-height") return;
       if (typeof event.data.height !== "number") return;
-      iframe.style.height = Math.max(1200, event.data.height + 24) + "px";
+      iframe.style.height = Math.max(700, event.data.height + 8) + "px";
     }});
   }})();
 </script>
