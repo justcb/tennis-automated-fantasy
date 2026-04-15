@@ -9,7 +9,12 @@ from html import escape
 from pathlib import Path
 from typing import Any
 
-from PIL import Image, ImageDraw, ImageFont
+try:
+    from PIL import Image, ImageDraw, ImageFont
+except ImportError:  # pragma: no cover - optional build dependency in CI
+    Image = None
+    ImageDraw = None
+    ImageFont = None
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -509,6 +514,11 @@ def render_squarespace_embed(config: dict[str, Any]) -> str:
 """
 
 
+def build_page_description(data: dict[str, Any]) -> str:
+    source = data.get("archive_summary") or strip_html(data["dek"])
+    return escape(source[:280])
+
+
 def render_page(data: dict[str, Any]) -> str:
     blocks = "\n\n".join(render_block(block) for block in data["blocks"])
     footer = ""
@@ -518,6 +528,10 @@ def render_page(data: dict[str, Any]) -> str:
         <div class="footer-note">{data["footer_note"]}</div>
       </section>"""
     slug = data["publish"]["filename"].removesuffix(".html")
+    canonical = data.get("public_url")
+    description = build_page_description(data)
+    og_url = escape(canonical, quote=True) if canonical else ""
+    og_title = escape(data["page_title"], quote=True)
 
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -525,6 +539,16 @@ def render_page(data: dict[str, Any]) -> str:
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{escape(data["page_title"])}</title>
+    <meta name="description" content="{description}" />
+    <meta name="robots" content="index,follow" />
+    {'<link rel="canonical" href="' + og_url + '" />' if canonical else ''}
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{og_title}" />
+    <meta property="og:description" content="{description}" />
+    {'<meta property="og:url" content="' + og_url + '" />' if canonical else ''}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{og_title}" />
+    <meta name="twitter:description" content="{description}" />
     <style>
 {STYLE}
     </style>
@@ -627,7 +651,7 @@ def extract_meta_value(page: dict[str, Any], label: str) -> str | None:
     return None
 
 
-def wrap_text(text: str, font: ImageFont.FreeTypeFont, max_width: int) -> list[str]:
+def wrap_text(text: str, font: Any, max_width: int) -> list[str]:
     words = text.split()
     lines: list[str] = []
     current = ""
@@ -645,6 +669,8 @@ def wrap_text(text: str, font: ImageFont.FreeTypeFont, max_width: int) -> list[s
 
 
 def build_social_card(config: dict[str, Any], current: dict[str, Any], bonus_names: list[str]) -> str:
+    if Image is None or ImageDraw is None or ImageFont is None:
+        return ""
     SOCIAL_DIR.mkdir(exist_ok=True)
     width = 1080
     height = 1080
@@ -751,11 +777,12 @@ def build_social_payload(config: dict[str, Any], current: dict[str, Any]) -> dic
         "label": label,
         "updated_at": current["publish"]["updated_at"],
         "url": url,
-        "image_url": image_url,
         "source": source,
         "x_text": x_text,
         "instagram_caption": instagram_caption,
     }
+    if image_url:
+        payload["image_url"] = image_url
     (SOCIAL_DIR / "latest.json").write_text(json.dumps(payload, indent=2) + "\n")
     (SOCIAL_DIR / "latest-x.txt").write_text(x_text + "\n")
     (SOCIAL_DIR / "latest-instagram.txt").write_text(instagram_caption + "\n")
@@ -819,27 +846,31 @@ def build_pages(pages: list[dict[str, Any]], config: dict[str, Any]) -> list[dic
 
     built_pages: list[dict[str, Any]] = []
     for page in pages:
-        html = render_page(page)
-        local_output = BASE_DIR / page["output"]
-        local_output.write_text(html)
-
         dist_output: Path | None = None
         relative_url: str | None = None
         public_url: str | None = None
         if not is_draft(page):
             publish_filename = page["publish"]["filename"]
             dist_output = PAGES_DIR / publish_filename
-            dist_output.write_text(html)
             relative_url = f"/pages/{publish_filename}"
             public_url = absolute_url(config["public_base_url"], relative_url)
 
+        built_page = {
+            **page,
+            "relative_url": relative_url,
+            "public_url": public_url,
+        }
+        html = render_page(built_page)
+        local_output = BASE_DIR / page["output"]
+        local_output.write_text(html)
+        if dist_output:
+            dist_output.write_text(html)
+
         built_pages.append(
             {
-                **page,
+                **built_page,
                 "local_output": str(local_output),
                 "dist_output": str(dist_output) if dist_output else None,
-                "relative_url": relative_url,
-                "public_url": public_url,
             }
         )
     return built_pages
