@@ -192,7 +192,7 @@
     "week": "Week 11",
     "label": "Week 11 Pre-Draw Edition",
     "updated_at": "2026-04-15T11:59:50-05:00",
-    "live": false,
+    "live": true,
     "draft": false
   }
 }
