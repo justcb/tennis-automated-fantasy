@@ -309,6 +309,30 @@ STYLE = """\
 """
 
 
+FONT_CANDIDATES = {
+    "title": [
+        "/System/Library/Fonts/Supplemental/Georgia.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSerif-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation2/LiberationSerif-Bold.ttf",
+    ],
+    "heading": [
+        "/System/Library/Fonts/Supplemental/GillSans.ttc",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
+        "/usr/share/fonts/truetype/liberation2/LiberationSans-Bold.ttf",
+    ],
+    "body": [
+        "/System/Library/Fonts/Supplemental/Arial.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf",
+    ],
+    "small": [
+        "/System/Library/Fonts/Supplemental/Arial.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/liberation2/LiberationSans-Regular.ttf",
+    ],
+}
+
+
 def read_json(path: Path) -> dict[str, Any]:
     with path.open() as handle:
         return json.load(handle)
@@ -668,6 +692,16 @@ def wrap_text(text: str, font: Any, max_width: int) -> list[str]:
     return lines
 
 
+def load_font(kind: str, size: int) -> Any:
+    candidates = FONT_CANDIDATES.get(kind, [])
+    for font_path in candidates:
+        try:
+            return ImageFont.truetype(font_path, size)
+        except Exception:
+            continue
+    return ImageFont.load_default()
+
+
 def build_social_card(config: dict[str, Any], current: dict[str, Any], bonus_names: list[str]) -> str:
     if Image is None or ImageDraw is None or ImageFont is None:
         return ""
@@ -687,10 +721,10 @@ def build_social_card(config: dict[str, Any], current: dict[str, Any], bonus_nam
     draw.ellipse((720, 720, 1120, 1120), fill="#7a360f")
     draw.rectangle((88, 88, 300, 128), fill=accent)
 
-    title_font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Georgia.ttf", 84)
-    h2_font = ImageFont.truetype("/System/Library/Fonts/Supplemental/GillSans.ttc", 42)
-    body_font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 34)
-    small_font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 24)
+    title_font = load_font("title", 84)
+    h2_font = load_font("heading", 42)
+    body_font = load_font("body", 34)
+    small_font = load_font("small", 24)
 
     draw.text((110, 94), "Tennis Automated", font=small_font, fill=paper)
     draw.text((110, 170), current["publish"]["week"], font=h2_font, fill=muted)
@@ -723,11 +757,13 @@ def build_social_card(config: dict[str, Any], current: dict[str, Any], bonus_nam
 
     filename = current["publish"]["filename"].removesuffix(".html") + ".png"
     output_path = SOCIAL_DIR / filename
-    image.save(output_path, format="PNG")
-
-    latest_path = SOCIAL_DIR / "latest-instagram-card.png"
-    image.save(latest_path, format="PNG")
-    return absolute_url(config["public_base_url"], f"/social/{filename}")
+    try:
+        image.save(output_path, format="PNG")
+        latest_path = SOCIAL_DIR / "latest-instagram-card.png"
+        image.save(latest_path, format="PNG")
+        return absolute_url(config["public_base_url"], f"/social/{filename}")
+    except Exception:
+        return ""
 
 
 def build_social_payload(config: dict[str, Any], current: dict[str, Any]) -> dict[str, Any]:
