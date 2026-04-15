@@ -1,15 +1,6 @@
 {
   "pages": [
     {
-      "week": "Week 8",
-      "label": "Week 8 Pre-Draw Edition",
-      "updated_at": "2026-04-15T11:56:50-05:00",
-      "relative_url": "/pages/2026-week-8-pre-draw.html",
-      "url": "https://tennis-automated-fantasy.netlify.app/pages/2026-week-8-pre-draw.html",
-      "headline": "Week 8 Cheat Sheet",
-      "source": "data/week-8.json"
-    },
-    {
       "week": "Week 7",
       "label": "Week 7 Pre-Draw Edition",
       "updated_at": "2026-04-15T11:55:56-05:00",
