@@ -1,12 +1,12 @@
 {
   "site_title": "Tennis Automated Fantasy",
-  "generated_at": "2026-04-15T11:59:51-05:00",
+  "generated_at": "2026-04-15T11:58:52-05:00",
   "current": {
-    "week": "Week 11",
-    "label": "Week 11 Pre-Draw Edition",
-    "updated_at": "2026-04-15T11:59:50-05:00",
-    "relative_url": "/pages/2026-week-11-pre-draw.html",
-    "url": "https://tennis-automated-fantasy.netlify.app/pages/2026-week-11-pre-draw.html",
-    "source": "data/week-11.json"
+    "week": "Week 10",
+    "label": "Week 10 Pre-Draw Edition",
+    "updated_at": "2026-04-15T11:58:52-05:00",
+    "relative_url": "/pages/2026-week-10-pre-draw.html",
+    "url": "https://tennis-automated-fantasy.netlify.app/pages/2026-week-10-pre-draw.html",
+    "source": "data/week-10.json"
   }
 }
