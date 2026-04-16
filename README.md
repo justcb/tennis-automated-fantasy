@@ -48,7 +48,7 @@ python3 /Users/studio/tennis-automated-fantasy/publish_week.py /Users/studio/ten
 Deliver the generated social payload to your webhook:
 
 ```bash
-SOCIAL_WEBHOOK_URL="https://tennis-automated-fantasy.netlify.app/api/social-relay" \
+SOCIAL_WEBHOOK_URL="https://your-relay.example.com/social" \
 SOCIAL_WEBHOOK_SECRET="shared-secret" \
 python3 /Users/studio/tennis-automated-fantasy/deliver_social.py
 ```
@@ -89,13 +89,14 @@ Each week JSON file includes:
 
 Exactly one file should have `publish.live = true`.
 
-If a future week should exist locally but stay out of Netlify and the public archive, add:
+If a future week should exist locally but stay out of the public site and archive, add:
 
 - `publish.draft = true`
 
 Recommended pattern:
 
-- Monday pre-draw file becomes live.
+- Monday results file becomes live.
+- Wednesday next-week pre-draw file becomes live.
 - Saturday draw-update file is published as a new version and becomes live.
 - The previous file stays in the archive.
 - Future scaffolds stay local as drafts until you are ready to publish them.
@@ -153,14 +154,36 @@ Paste the contents of `squarespace-code-block.html` into a Squarespace Code Bloc
 
 ## Hosting
 
-`netlify.toml` is included for Netlify. Point the site at this folder/repo and publish `dist/`.
+Primary path:
 
-For the relay function, add these Netlify environment variables:
+- GitHub Pages via the `gh-pages` branch
+- custom domain target: `https://fantasy.tennisautomated.com`
 
-- `BUFFER_API_KEY`
-- `SOCIAL_WEBHOOK_SECRET`
-- optional `BUFFER_X_CHANNEL_ID`
-- optional `BUFFER_INSTAGRAM_CHANNEL_ID`
+This repo is now set up to publish the `dist/` directory directly to the `gh-pages` branch.
+
+One-time GitHub setup:
+
+1. In the repo settings, set Pages source to `Deploy from a branch`.
+2. Select branch `gh-pages` and folder `/ (root)`.
+3. Add the custom domain `fantasy.tennisautomated.com`.
+4. Point DNS for `fantasy.tennisautomated.com` to GitHub Pages as a `CNAME` to `justcb.github.io`.
+
+Deploy command:
+
+```bash
+python3 /Users/studio/tennis-automated-fantasy/build_week.py
+python3 /Users/studio/tennis-automated-fantasy/deploy_gh_pages.py
+```
+
+The build writes a `CNAME` file into `dist/`, so the custom domain follows the published branch cleanly.
+
+If you prefer a completely manual branch deploy, the same approach can be done by copying `dist/` to `gh-pages`, but `deploy_gh_pages.py` keeps that repeatable.
+
+Legacy path:
+
+- `netlify.toml` remains in the repo, but Netlify is no longer the primary site host.
+
+If you still want the relay function somewhere managed, host the social relay separately from the site.
 
 ## Content Schema
 

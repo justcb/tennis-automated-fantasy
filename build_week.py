@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import re
 import sys
+from urllib.parse import urlparse
 from datetime import datetime
 from html import escape
 from pathlib import Path
@@ -972,6 +973,7 @@ def build_current_index(config: dict[str, Any], built_pages: list[dict[str, Any]
 
 
 def write_support_files() -> None:
+    config = load_config()
     (DIST_DIR / "_headers").write_text(
         "/manifest/latest.json\n"
         "  Cache-Control: no-store, max-age=0\n"
@@ -986,7 +988,10 @@ def write_support_files() -> None:
         "/index.html\n"
         "  Cache-Control: public, max-age=300\n"
     )
-    config = load_config()
+    (DIST_DIR / ".nojekyll").write_text("\n")
+    hostname = urlparse(config["public_base_url"]).hostname or ""
+    if hostname:
+        (DIST_DIR / "CNAME").write_text(hostname + "\n")
     (BASE_DIR / "squarespace-code-block.html").write_text(render_squarespace_embed(config))
 
 
