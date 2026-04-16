@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tennis Automated | ATP Fantasy Week 2</title>
+    <meta name="description" content="Post-draw ATP Fantasy update for Barcelona and Munich with quarter paths, revised Bonus Ball rankings, and updated value and trap calls." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://fantasy.tennisautomated.com/pages/2026-week-2-draw-update.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Tennis Automated | ATP Fantasy Week 2" />
+    <meta property="og:description" content="Post-draw ATP Fantasy update for Barcelona and Munich with quarter paths, revised Bonus Ball rankings, and updated value and trap calls." />
+    <meta property="og:url" content="https://fantasy.tennisautomated.com/pages/2026-week-2-draw-update.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tennis Automated | ATP Fantasy Week 2" />
+    <meta name="twitter:description" content="Post-draw ATP Fantasy update for Barcelona and Munich with quarter paths, revised Bonus Ball rankings, and updated value and trap calls." />
+    <style>
+      :root {
+        --bg: #f3eee4;
+        --paper: #fffaf2;
+        --ink: #11211d;
+        --muted: #52605c;
+        --accent: #c65a18;
+        --accent-2: #1d6b52;
+        --line: rgba(17, 33, 29, 0.14);
+        --shadow: 0 20px 50px rgba(17, 33, 29, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(198, 90, 24, 0.12), transparent 28%),
+          radial-gradient(circle at top right, rgba(29, 107, 82, 0.12), transparent 32%),
+          linear-gradient(180deg, #efe5d4 0%, var(--bg) 100%);
+      }
+
+      .wrap {
+        width: min(1100px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, rgba(17, 33, 29, 0.96), rgba(29, 107, 82, 0.94));
+        color: #f8f4ec;
+        border-radius: 28px;
+        padding: 36px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -80px -100px auto;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: rgba(198, 90, 24, 0.22);
+        filter: blur(6px);
+        z-index: 0;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 6px 12px;
+        border: 1px solid rgba(248, 244, 236, 0.28);
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.05;
+      }
+
+      h1 {
+        font-size: clamp(42px, 7vw, 78px);
+        margin-top: 16px;
+        max-width: 700px;
+      }
+
+      .dek {
+        margin-top: 18px;
+        max-width: 760px;
+        font-size: 20px;
+        line-height: 1.5;
+        color: rgba(248, 244, 236, 0.88);
+      }
+
+      .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .meta-card,
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .meta-card {
+        padding: 18px;
+        color: var(--ink);
+      }
+
+      .meta-label {
+        display: block;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .meta-value {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 20px;
+        margin-top: 22px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .card h2 {
+        font-size: 28px;
+        margin-bottom: 16px;
+      }
+
+      .card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin: 0 0 14px;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-size: 14px;
+        background: rgba(29, 107, 82, 0.06);
+      }
+
+      .section-title {
+        margin-top: 28px;
+        margin-bottom: 14px;
+        font-size: 14px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent-2);
+      }
+
+      .pick-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .pick {
+        padding: 16px 0 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .pick:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .tag {
+        display: inline-block;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 8px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .archive {
+        width: min(1100px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      .archive-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .archive-item {
+        display: block;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        color: inherit;
+        text-decoration: none;
+        padding: 22px;
+      }
+
+      .archive-item strong {
+        display: block;
+        font-size: 21px;
+        margin-bottom: 8px;
+      }
+
+      .archive-meta {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .footer-note {
+        margin-top: 22px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 860px) {
+        .grid,
+        .two-col {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding: 28px;
+        }
+
+        h1 {
+          font-size: 44px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <span class="eyebrow">Tennis Automated | ATP Fantasy | Week 2 Draw Update</span>
+        <h1>Week 2 Cheat Sheet</h1>
+        <p class="dek">The draws are now set for <strong>13-19 April 2026</strong>. Week 2 is no longer just a form week, it is a <strong>path week</strong>: Carlos Alcaraz and Lorenzo Musetti landed with the clearest Barcelona routes, while Munich now hinges on whether you trust Alexander Zverev’s home-court edge more than Ben Shelton’s scoring profile or Joao Fonseca’s upside.</p>
+        <div class="hero-meta">
+
+          <div class="meta-card">
+            <span class="meta-label">Week Window</span>
+            <span class="meta-value">13-19 April</span>
+          </div>
+
+          <div class="meta-card">
+            <span class="meta-label">Slate</span>
+            <span class="meta-value">Barcelona + Munich</span>
+          </div>
+
+          <div class="meta-card">
+            <span class="meta-label">Surface</span>
+            <span class="meta-value">Clay only</span>
+          </div>
+
+          <div class="meta-card">
+            <span class="meta-label">Key Date</span>
+            <span class="meta-value">Draws: 11 April</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top: 22px;">
+        <h2>Tournament Lens</h2>
+        <div class="two-col">
+          <div>
+            <h3>Barcelona</h3>
+            <p>The official draw update gives <strong>Carlos Alcaraz</strong> a qualifier in round one, with <strong>Sebastian Baez or Tomas Machac</strong> next, a projected quarter-final with <strong>Andrey Rublev</strong>, and a projected semi-final with <strong>Alex de Minaur</strong> or <strong>Jack Draper</strong>. On the bottom half, <strong>Lorenzo Musetti</strong> opens against <strong>Martin Landaluce</strong>, with a projected quarter-final against sixth seed <strong>Valentin Vacherot</strong> and a likely semi-final collision with <strong>Karen Khachanov</strong> or <strong>Cameron Norrie</strong>.</p>
+            <ul>
+              <li>Best draw winner: Alcaraz</li>
+              <li>Softest route to the semis: Musetti</li>
+              <li>Most dangerous quarter: de Minaur/Draper/Rublev near Alcaraz</li>
+              <li>Biggest health question: Ruud</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Munich</h3>
+            <p>The official Munich draw gives <strong>Alexander Zverev</strong> an opener against <strong>Miomir Kecmanovic</strong>, <strong>Ben Shelton</strong> a qualifier to start, <strong>Joao Fonseca</strong> an immediate test against <strong>Alejandro Tabilo</strong>, and <strong>Francisco Cerundolo</strong> a dangerous first-round clash with local former champion <strong>Jan-Lennard Struff</strong>. Munich still looks like the better fantasy event for ace-driven scorers, but the opening-round variance is real.</p>
+            <ul>
+              <li>Best title anchor: Zverev</li>
+              <li>Best opening draw among the top names: Shelton</li>
+              <li>Highest-upside risk/reward play: Fonseca</li>
+              <li>Most dangerous opener: Cerundolo vs Struff</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+<section class="grid">
+        <article class="card">
+          <h2>What Matters This Week</h2>
+          <p>ATP Fantasy is built on a <strong>100-credit</strong> budget with <strong>six starters</strong>, <strong>two alternates</strong>, and one <strong>Bonus Ball</strong> player who scores double. Once the draws are out, the format becomes far more about <strong>quarter placement</strong> and <strong>opening-round safety</strong> than generic surface form.</p>
+          <p>Barcelona and Munich are both ATP 500s, so the round-winning value remains strong, but the post-draw edge is now in identifying who can realistically get to Friday without surviving two coin-flip matches. This is where Alcaraz, Musetti and Shelton gain ground, while several popular names become more fragile.</p>
+          <div class="pill-row">
+            <span class="pill">+2 per ace</span>
+            <span class="pill">+10 straight-sets win</span>
+            <span class="pill">+20 upset win</span>
+            <span class="pill">-2 per double fault</span>
+            <span class="pill">-20 upset loss</span>
+          </div>
+          <div class="section-title">Best Week 2 Angles</div>
+          <ul>
+            <li>Build around draw clarity first, especially in Barcelona.</li>
+            <li>Treat Shelton as safer post-draw than several similarly priced clay names.</li>
+            <li>Do not ignore Fonseca’s upside, but price in the Tabilo risk immediately.</li>
+            <li>Fade crowded Barcelona quarters unless the price discount is significant.</li>
+          </ul>
+        </article>
+        <aside class="card">
+          <h2>Amazing Stats From Last Week</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Jannik Sinner</span>
+                      <p>Sinner carried a run of <strong>37 consecutive sets won at ATP Masters 1000 level</strong> into Monte-Carlo before Tomas Machac finally took one off him. Even with the streak snapped, he still powered into the last eight, a reminder of what a true fantasy floor looks like when a top player’s draw is manageable.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Carlos Alcaraz</span>
+                      <p>Alcaraz pushed his <strong>clay-court winning streak to 15 matches</strong> by fighting past Tomas Martin Etcheverry after dropping a messy second set. Pair that with a draw that starts qualifier, then Baez or Machac, and he stays at the top of the Week 2 Bonus Ball board.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Alexander Bublik</span>
+                      <p>Bublik beat Jiri Lehecka in <strong>75 minutes</strong> and ATP noted that he is now <strong>18-5 on clay since the start of 2025</strong>. If fantasy managers still treat him like a surface flier, there is leverage in that gap.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Joao Fonseca</span>
+                      <p>Fonseca’s Monte-Carlo quarter-final run pushed him from <strong>No. 40 to No. 35 in the live rankings</strong>, according to ATP’s Munich draw story. That ranking move matters for fantasy because his market value still lags how dangerous he already is on clay.</p>
+                    </div>
+                  </div>
+        </aside>
+      </section>
+
+<section class="grid">
+        <article class="card">
+          <h2>Bonus Ball Board</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">1. Carlos Alcaraz</span>
+                      <p>The draw locks this in. Alcaraz opens against a qualifier, then likely faces Baez or Machac, with Rublev projected in the quarters. It is not a free runway, but it is the clearest elite path on the board, and that makes him the best Week 2 Bonus Ball.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">2. Lorenzo Musetti</span>
+                      <p>Musetti is the biggest draw riser in Barcelona. He starts against Landaluce, then gets Buse or Moutet, with a projected quarter-final against sixth seed Valentin Vacherot. If you want a less expensive captain-style anchor than Alcaraz, Musetti is the sharp alternative.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">3. Alexander Zverev</span>
+                      <p>Zverev still belongs near the top because Munich remains his home event and he is the most likely champion there. But the draw did not turn him into a free square: Kecmanovic is a real opener, and Munich’s upper section can get messy fast.</p>
+                    </div>
+                  </div>
+        </article>
+        <aside class="card">
+          <h2>Core Plays</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Ben Shelton</span>
+                      <p>Shelton got one of the best draw outcomes among the top seeds: a qualifier first, then a section that still gives him room to stack serve bonuses. In the post-draw version of Week 2, he looks more like a core play than a pure upside dart.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Lorenzo Musetti</span>
+                      <p>Musetti’s route is dramatically cleaner now that the bracket is set. The opening two rounds are manageable, and his projected quarter-final is far softer than the top-half traffic around Alcaraz.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Andrey Rublev</span>
+                      <p>Rublev still has upside, but now the use case is specific: he is the aggressive bet on the player projected to meet Alcaraz in the Barcelona quarter-finals. That makes him a strong tournament play if you want leverage against the obvious Bonus Ball build.</p>
+                    </div>
+                  </div>
+        </aside>
+      </section>
+
+<section class="grid">
+        <article class="card">
+          <h2>Value Targets</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Joao Fonseca</span>
+                      <p>Fonseca is still the best pure upside value on the slate. The draw is not easy because Tabilo leads their head-to-head 2-0, but ATP’s Munich report also notes that Fonseca would then face Michelsen or Rinderknech, both players he has beaten. He remains the kind of player who can smash value in two matches.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Valentin Vacherot</span>
+                      <p>Vacherot being projected as Musetti’s quarter-final opponent tells you how much his level has risen. If ATP Fantasy still prices him closer to his ranking than to his current clay confidence, he is the type of seeded player who can quietly produce a profitable week.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Francisco Cerundolo</span>
+                      <p>Cerundolo is dangerous enough to beat almost anyone in Munich if he gets through Struff. That opener adds risk, but it can also suppress ownership, which is exactly what you want from a leverage value on clay.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Alexander Bublik</span>
+                      <p>The Bublik case does not change after the draw: he is still the volatility lever for fantasy managers who want ace points and are willing to live with the floor. The Monte-Carlo form spike was real enough to keep him in the Week 2 value mix.</p>
+                    </div>
+                  </div>
+        </article>
+        <aside class="card">
+          <h2>Trap List</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Casper Ruud</span>
+                      <p>Ruud is always tempting on clay, but he retired against Auger-Aliassime in Monte-Carlo. Until there is clarity on his status, he is a dangerous Week 2 click.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Joao Fonseca at high ownership</span>
+                      <p>Fonseca is a great upside play, but the draw did not hand him a free first round. Tabilo already leads him 2-0 in their head-to-head, so if the field treats Fonseca like a must-play value, that is the moment to be careful.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">The Alcaraz quarter outside Alcaraz</span>
+                      <p>Rublev, de Minaur and Draper are all strong players, but the draw clusters too much quality near the tournament favorite. Unless one of them comes at a real discount, that is the quarter most likely to cannibalize itself.</p>
+                    </div>
+                  </div>
+        </aside>
+      </section>
+      <section class="card" style="margin-top: 22px;">
+        <div class="footer-note">Draw update based on official ATP draw coverage available on <strong>12 April 2026</strong>.</div>
+      </section>
+    </main>
+    <script>
+      (function () {
+        var slug = "2026-week-2-draw-update";
+        function sendHeight() {
+          if (window.parent === window) return;
+          var height = Math.max(
+            document.body ? document.body.scrollHeight : 0,
+            document.documentElement ? document.documentElement.scrollHeight : 0
+          );
+          window.parent.postMessage({ type: "ta-fantasy-height", slug: slug, height: height }, "*");
+        }
+        if ("ResizeObserver" in window) {
+          var observer = new ResizeObserver(sendHeight);
+          observer.observe(document.body);
+        }
+        window.addEventListener("load", sendHeight);
+        window.addEventListener("resize", sendHeight);
+        setTimeout(sendHeight, 150);
+        setTimeout(sendHeight, 600);
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tennis Automated | ATP Fantasy Week 3</title>
+    <meta name="description" content="Pre-draw ATP Fantasy read for Madrid with updated Monte-Carlo carryover, current Barcelona and Munich signals, and refreshed Bonus Ball rankings before the official draw." />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://fantasy.tennisautomated.com/pages/2026-week-3-pre-draw.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Tennis Automated | ATP Fantasy Week 3" />
+    <meta property="og:description" content="Pre-draw ATP Fantasy read for Madrid with updated Monte-Carlo carryover, current Barcelona and Munich signals, and refreshed Bonus Ball rankings before the official draw." />
+    <meta property="og:url" content="https://fantasy.tennisautomated.com/pages/2026-week-3-pre-draw.html" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tennis Automated | ATP Fantasy Week 3" />
+    <meta name="twitter:description" content="Pre-draw ATP Fantasy read for Madrid with updated Monte-Carlo carryover, current Barcelona and Munich signals, and refreshed Bonus Ball rankings before the official draw." />
+    <style>
+      :root {
+        --bg: #f3eee4;
+        --paper: #fffaf2;
+        --ink: #11211d;
+        --muted: #52605c;
+        --accent: #c65a18;
+        --accent-2: #1d6b52;
+        --line: rgba(17, 33, 29, 0.14);
+        --shadow: 0 20px 50px rgba(17, 33, 29, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Georgia, "Times New Roman", serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at top left, rgba(198, 90, 24, 0.12), transparent 28%),
+          radial-gradient(circle at top right, rgba(29, 107, 82, 0.12), transparent 32%),
+          linear-gradient(180deg, #efe5d4 0%, var(--bg) 100%);
+      }
+
+      .wrap {
+        width: min(1100px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      .hero {
+        background: linear-gradient(135deg, rgba(17, 33, 29, 0.96), rgba(29, 107, 82, 0.94));
+        color: #f8f4ec;
+        border-radius: 28px;
+        padding: 36px;
+        box-shadow: var(--shadow);
+        overflow: hidden;
+        position: relative;
+      }
+
+      .hero > * {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -80px -100px auto;
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        background: rgba(198, 90, 24, 0.22);
+        filter: blur(6px);
+        z-index: 0;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 6px 12px;
+        border: 1px solid rgba(248, 244, 236, 0.28);
+        border-radius: 999px;
+        font-size: 12px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.05;
+      }
+
+      h1 {
+        font-size: clamp(42px, 7vw, 78px);
+        margin-top: 16px;
+        max-width: 700px;
+      }
+
+      .dek {
+        margin-top: 18px;
+        max-width: 760px;
+        font-size: 20px;
+        line-height: 1.5;
+        color: rgba(248, 244, 236, 0.88);
+      }
+
+      .hero-meta {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 14px;
+        margin-top: 28px;
+      }
+
+      .meta-card,
+      .card {
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+      }
+
+      .meta-card {
+        padding: 18px;
+        color: var(--ink);
+      }
+
+      .meta-label {
+        display: block;
+        font-size: 11px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .meta-value {
+        font-size: 20px;
+        font-weight: 700;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 20px;
+        margin-top: 22px;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .card h2 {
+        font-size: 28px;
+        margin-bottom: 16px;
+      }
+
+      .card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        margin: 0 0 14px;
+        font-size: 17px;
+        line-height: 1.65;
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 14px;
+      }
+
+      .pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 10px 14px;
+        font-size: 14px;
+        background: rgba(29, 107, 82, 0.06);
+      }
+
+      .section-title {
+        margin-top: 28px;
+        margin-bottom: 14px;
+        font-size: 14px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--accent-2);
+      }
+
+      .pick-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .pick {
+        padding: 16px 0 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .pick:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .tag {
+        display: inline-block;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 8px;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 10px;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .archive {
+        width: min(1100px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      .archive-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .archive-item {
+        display: block;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        border-radius: 22px;
+        box-shadow: var(--shadow);
+        color: inherit;
+        text-decoration: none;
+        padding: 22px;
+      }
+
+      .archive-item strong {
+        display: block;
+        font-size: 21px;
+        margin-bottom: 8px;
+      }
+
+      .archive-meta {
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        margin-bottom: 8px;
+      }
+
+      .footer-note {
+        margin-top: 22px;
+        padding-top: 18px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 860px) {
+        .grid,
+        .two-col {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          padding: 28px;
+        }
+
+        h1 {
+          font-size: 44px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <section class="hero">
+        <span class="eyebrow">Tennis Automated | ATP Fantasy | Week 3 Pre-Draw</span>
+        <h1>Week 3 Cheat Sheet</h1>
+        <p class="dek">Pre-draw edition for <strong>20-26 April 2026</strong>. Week 3 moves to a standalone <strong>Madrid ATP Masters 1000</strong> slate, and the board is already tightening: <strong>Jannik Sinner</strong> arrives off the Monte-Carlo title and back at World No. 1, <strong>Carlos Alcaraz</strong> is already stacking wins in Barcelona, and the edge comes from balancing elite title equity against Week 2 workload before the Madrid bracket lands.</p>
+        <div class="hero-meta">
+
+          <div class="meta-card">
+            <span class="meta-label">Week Window</span>
+            <span class="meta-value">20-26 April</span>
+          </div>
+
+          <div class="meta-card">
+            <span class="meta-label">Slate</span>
+            <span class="meta-value">Madrid only</span>
+          </div>
+
+          <div class="meta-card">
+            <span class="meta-label">Surface</span>
+            <span class="meta-value">Clay altitude</span>
+          </div>
+
+          <div class="meta-card">
+            <span class="meta-label">Key Date</span>
+            <span class="meta-value">Event starts: 22 Apr</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="card" style="margin-top: 22px;">
+        <h2>Tournament Lens</h2>
+        <div class="two-col">
+          <div>
+            <h3>Top Of Board</h3>
+            <p>Madrid's official entry list says the field will feature <strong>all current Top 10 players</strong> in the PIF ATP Rankings. <strong>Jannik Sinner</strong> arrives as the reigning Monte-Carlo champion and current World No. 1, <strong>Carlos Alcaraz</strong> owns a <strong>15-2 Madrid record</strong> with two titles, <strong>Novak Djokovic</strong> is a three-time champion, and <strong>Casper Ruud</strong> returns as defending champion. Former winners <strong>Alexander Zverev</strong> and <strong>Andrey Rublev</strong> stay relevant because Madrid rewards serve-plus-first-ball patterns more than slower clay stops.</p>
+            <ul>
+              <li>Best home-soil ceiling: Alcaraz</li>
+              <li>Best recent Masters form: Sinner</li>
+              <li>Best Madrid-specific serve case: Zverev</li>
+              <li>Best veteran leverage: Djokovic</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Fantasy Shape</h3>
+            <p>Madrid is not a normal clay week. The altitude keeps first-strike tennis live, which means serve bonus hunters matter more here than they do in slower clay events. The event runs from <strong>22 April to 3 May</strong>, including a stadium exhibition at the <strong>Santiago Bernabeu</strong>, so pre-draw fantasy builds should start with players who have real semi-final equity and then layer in upside values such as <strong>Joao Fonseca</strong>, <strong>Ben Shelton</strong>, and <strong>Andrey Rublev</strong> once the bracket shows where the traffic lands.</p>
+            <ul>
+              <li>Prioritize semi-final equity over one-match upside.</li>
+              <li>Give extra weight to ace production in Madrid conditions.</li>
+              <li>Wait for the draw before stacking one half too aggressively.</li>
+              <li>Watch Barcelona and Munich finalists for turnaround fatigue and hidden physical flags.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+<section class="grid">
+        <article class="card">
+          <h2>What Matters This Week</h2>
+          <p>ATP Fantasy still gives you a <strong>100-credit</strong> budget, <strong>six starters</strong>, <strong>two alternates</strong>, and one <strong>Bonus Ball</strong> player who scores double. The scoring rules do not change, but a standalone ATP Masters 1000 week changes the math because deep advancement is worth more than simply surviving into Thursday.</p>
+          <p>Player prices are still based on the PIF ATP Live Rankings, which means the pre-draw edge comes from identifying ranking-driven mispricings before the market settles. Madrid especially rewards players who can hold serve cheaply and finish points early, but that upside only matters if the route is not crowded and the Week 2 workload is manageable.</p>
+          <div class="pill-row">
+            <span class="pill">+2 per ace</span>
+            <span class="pill">+10 straight-sets win</span>
+            <span class="pill">+20 upset win</span>
+            <span class="pill">-2 per double fault</span>
+            <span class="pill">-20 upset loss</span>
+          </div>
+          <div class="section-title">Best Week 3 Angles</div>
+          <ul>
+            <li>Start with one of Sinner or Alcaraz as your title anchor.</li>
+            <li>Treat Madrid as faster clay, not generic clay.</li>
+            <li>Use live-ranking risers such as Fonseca and Vacherot as pricing checks.</li>
+            <li>Be ready to fade famous names if the draw packs their quarter or Week 2 load gets heavy.</li>
+          </ul>
+        </article>
+        <aside class="card">
+          <h2>Last Week&#x27;s Top Performers</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Best scorer: Jannik Sinner</span>
+                      <p>Sinner beat Carlos Alcaraz in the Monte-Carlo final to claim his <strong>first clay-court Masters 1000 title</strong>. ATP also noted that he matched Novak Djokovic's 2015 feat by winning the first <strong>three Masters 1000 events</strong> of a season, extended his <strong>Masters 1000 winning streak to 22 matches</strong>, and began his <strong>67th week at No. 1</strong> on Monday.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Best elite floor: Carlos Alcaraz</span>
+                      <p>Alcaraz did not lift the Monte-Carlo trophy, but he still reached the final and immediately bounced back in Barcelona, beating <strong>Otto Virtanen</strong> while keeping his Madrid case intact. ATP also noted that he owns a <strong>15-2 record in Madrid</strong>, which is why he stays near the top of the Week 3 board even after the Monte-Carlo loss.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Best outperformer: Valentin Vacherot</span>
+                      <p>Vacherot was the clearest one-week overperformer. ATP reported that he beat <strong>Lorenzo Musetti</strong> and <strong>Alex de Minaur</strong> on his way to the Monte-Carlo semi-finals, became the <strong>first Monegasque player</strong> to reach that stage in the Principality, and surged to <strong>No. 17 in the live rankings</strong> during the run.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Best under-the-radar carryover: Joao Fonseca</span>
+                      <p>Fonseca is carrying the cleanest momentum into Week 3 outside the elite tier. ATP highlighted that he reached his <strong>first ATP Masters 1000 quarter-final</strong> in Monte-Carlo, then beat <strong>Alejandro Tabilo</strong> in cold Munich conditions to climb to <strong>No. 31 in the live rankings</strong>, which is exactly the kind of ranking-versus-upside gap fantasy managers should track.</p>
+                    </div>
+                  </div>
+        </aside>
+      </section>
+
+<section class="grid">
+        <article class="card">
+          <h2>Bonus Ball Board</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">1. Carlos Alcaraz</span>
+                      <p>Until the draw says otherwise, Alcaraz remains the default Week 3 Bonus Ball. He combines the best Madrid-specific record with home-soil comfort and the strongest pre-draw event history on the board.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">2. Jannik Sinner</span>
+                      <p>Sinner's Masters floor is currently unmatched, and he now arrives with the Monte-Carlo title and the No. 1 ranking back in hand. If you want the cleanest pre-draw floor instead of the home-soil ceiling, he is the alternative Bonus Ball.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">3. Alexander Zverev</span>
+                      <p>Zverev has the kind of serve-plus-first-ball profile that plays well in Madrid altitude, and he already owns a title here. His gritty Munich opener also matters because it kept the form line alive after another Monte-Carlo semi-final.</p>
+                    </div>
+                  </div>
+        </article>
+        <aside class="card">
+          <h2>Core Plays</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Carlos Alcaraz</span>
+                      <p>The best combination of event history, ceiling and likely ownership. If his quarter is not overloaded, he stays central to Week 3 builds.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Jannik Sinner</span>
+                      <p>Even on clay, Sinner is still giving fantasy managers the cleanest elite floor because he wins service games efficiently and rarely leaks points in ugly patches.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Alexander Zverev</span>
+                      <p>Zverev remains a strong pre-draw core play because the Madrid conditions help his first serve, his event history is real, and his current clay form is sturdy enough that he does not need a perfect bracket to matter.</p>
+                    </div>
+                  </div>
+        </aside>
+      </section>
+
+<section class="grid">
+        <article class="card">
+          <h2>Value Targets</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Joao Fonseca</span>
+                      <p>Fonseca remains the cleanest upside value archetype in ATP Fantasy. His ranking still trails his actual threat level on big stages, and Madrid's conditions can amplify his serve-plus-forehand damage.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Ben Shelton</span>
+                      <p>Madrid is one of the few clay stops where Shelton's ace profile can carry genuine weekly value. If his draw is not packed with elite returners, the scoring format can do the rest.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Valentin Vacherot</span>
+                      <p>If ATP Fantasy prices Vacherot off raw rank instead of current level, he becomes one of the more interesting upside checks on the board. Monte-Carlo showed he can handle big-stage clay against top names.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Andrey Rublev</span>
+                      <p>Rublev is not a bargain-bin value, but he is the kind of former champion who can still come in cheaper than his Madrid-specific upside. That makes him one of the more important pre-draw pricing checks.</p>
+                    </div>
+                  </div>
+        </article>
+        <aside class="card">
+          <h2>Trap List</h2>
+          <div class="pick-list">
+          
+                    <div class="pick">
+                      <span class="tag">Casper Ruud at full defending-champion tax</span>
+                      <p>The Madrid title run is real, but fantasy is about this week's path and price, not last year's points. If Ruud is priced aggressively and his draw is crowded, he can become an easy overpay.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Novak Djokovic without draw clarity</span>
+                      <p>Djokovic always carries ceiling, but the pre-draw version of Madrid is exactly where brand-name gravity can outrun actual lineup value. Quarter placement matters too much to lock him blindly.</p>
+                    </div>
+          
+                    <div class="pick">
+                      <span class="tag">Anyone arriving heavy from Barcelona or Munich</span>
+                      <p>Back-to-back clay weeks can flip from momentum to fatigue quickly. If a player goes deep in Week 2, picks up a physical issue, or lands a rough Madrid opener, the risk profile changes immediately.</p>
+                    </div>
+                  </div>
+        </aside>
+      </section>
+      <section class="card" style="margin-top: 22px;">
+        <div class="footer-note">Pre-draw edition updated on <strong>15 April 2026</strong> using official ATP Madrid field information, official Monte-Carlo results, and current Barcelona and Munich form signals.</div>
+      </section>
+    </main>
+    <script>
+      (function () {
+        var slug = "2026-week-3-pre-draw";
+        function sendHeight() {
+          if (window.parent === window) return;
+          var height = Math.max(
+            document.body ? document.body.scrollHeight : 0,
+            document.documentElement ? document.documentElement.scrollHeight : 0
+          );
+          window.parent.postMessage({ type: "ta-fantasy-height", slug: slug, height: height }, "*");
+        }
+        if ("ResizeObserver" in window) {
+          var observer = new ResizeObserver(sendHeight);
+          observer.observe(document.body);
+        }
+        window.addEventListener("load", sendHeight);
+        window.addEventListener("resize", sendHeight);
+        setTimeout(sendHeight, 150);
+        setTimeout(sendHeight, 600);
+      })();
+    </script>
+  </body>
+</html>

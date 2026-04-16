@@ -1,0 +1,16 @@
+/manifest/latest.json
+  Cache-Control: no-store, max-age=0
+  Access-Control-Allow-Origin: *
+
+/manifest/archive.json
+  Cache-Control: no-store, max-age=0
+  Access-Control-Allow-Origin: *
+
+/pages/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/archive/*
+  Cache-Control: public, max-age=300
+
+/index.html
+  Cache-Control: public, max-age=300
