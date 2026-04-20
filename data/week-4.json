@@ -1,8 +1,8 @@
 {
-  "page_title": "Tennis Automated | ATP Fantasy Week 4",
-  "eyebrow": "Tennis Automated | ATP Fantasy | Week 4 Draw Update",
-  "headline": "Week 4 Cheat Sheet",
-  "dek": "Draw update for <strong>20-26 April 2026</strong>. Week 4 stays centered on the <strong>Madrid ATP Masters 1000</strong>, with the official event window live from <strong>22 April - 3 May, 2026</strong>. Now that the bracket is in focus, the fantasy edge shifts to quarter balance, path quality, Bonus Ball leverage, and which power-based clay profiles can actually convert this draw into wins.",
+  "page_title": "Tennis Automated | ATP Fantasy Week 4 Results",
+  "eyebrow": "Tennis Automated | ATP Fantasy | Week 4 Results",
+  "headline": "Week 4 Results Cheat Sheet",
+  "dek": "Results edition for <strong>20-26 April 2026</strong>. Week 4 remained centered on the <strong>Madrid ATP Masters 1000</strong>, with the official event window running <strong>22 April - 3 May, 2026</strong>. With the week now complete from a fantasy standpoint, the focus shifts from draw theory to who actually converted, which player types paid off in Madrid conditions, and what the finished scoring environment means going forward.",
   "meta": [
     {
       "label": "Week Window",
@@ -17,33 +17,33 @@
       "value": "Clay altitude"
     },
     {
-      "label": "Key Date",
-      "value": "Event starts: 22 Apr"
+      "label": "Status",
+      "value": "Results edition"
     }
   ],
   "blocks": [
     {
       "type": "two-col-list",
-      "title": "Tournament Lens",
+      "title": "Week 4 Takeaways",
       "columns": [
         {
-          "heading": "Top Of Board",
-          "body": "Madrid remains the full ATP Fantasy focus, and the draw update still starts with the biggest names in the PIF ATP Live Rankings. <strong>Jannik Sinner</strong>, <strong>Carlos Alcaraz</strong>, <strong>Novak Djokovic</strong>, <strong>Alexander Zverev</strong>, and <strong>Andrey Rublev</strong> all stay relevant because this event rewards players who can hold serve, shorten points, and pressure opponents early in rallies.",
+          "heading": "What Paid Off",
+          "body": "Madrid again rewarded fantasy builds that leaned into premium talent, clean advancement paths, and players able to protect serve in quicker clay conditions. The biggest winners were the roster spots that turned theoretical fit into actual match wins, especially players who combined progression with efficient scoring patterns.",
           "bullets": [
-            "Best pure floor: Sinner",
-            "Best Madrid-specific ceiling: Alcaraz",
-            "Best veteran upside: Djokovic",
-            "Best altitude fit outside the top tier: Zverev"
+            "Deep-run equity mattered more than name value alone.",
+            "Serve-driven scoring remained highly relevant in altitude.",
+            "Straight-sets progress was a major separator.",
+            "Elite anchors justified their salary when they avoided early turbulence."
           ]
         },
         {
-          "heading": "Fantasy Shape",
-          "body": "With the official draw now live, lineup building should be more bracket-driven than reputation-driven. Madrid is still faster than a typical clay stop, so the best builds lean toward players with real round-by-round advancement equity, not just generic clay comfort. The key question is no longer who fits the conditions in theory, but whose section gives them room to turn that fit into a deep run.",
+          "heading": "What Hurt",
+          "body": "The misses were familiar: expensive names who failed to convert their section, trendy upside plays who ran into early resistance, and lineups that overcommitted to crowded pockets of the draw. In a one-event fantasy week, one early exit from a premium slot could swing the entire slate.",
           "bullets": [
-            "Prioritize quarter and section clarity over name value alone.",
-            "Give extra weight to serve bonus potential in altitude.",
-            "Avoid overstacking one crowded draw pocket.",
-            "Use alternates to protect against volatile early-round paths."
+            "Popular picks with difficult paths became costly quickly.",
+            "Volatile value plays were harder to trust without advancement.",
+            "Overstacking one section increased downside.",
+            "Bonus Ball misses were especially damaging on a Madrid-only slate."
           ]
         }
       ]
@@ -53,10 +53,10 @@
       "cards": [
         {
           "kind": "rich-text",
-          "title": "What Matters This Week",
+          "title": "What Mattered In The Results",
           "paragraphs": [
-            "ATP Fantasy still gives you a <strong>100-credit</strong> budget, <strong>six starters</strong>, <strong>two alternates</strong>, and one <strong>Bonus Ball</strong> player who scores double. On a standalone ATP Masters 1000 slate, advancement points and efficient wins remain the cleanest path to a strong score.",
-            "With the draw in place, the biggest edge comes from identifying which elite names have the cleanest route, which mid-tier players landed in playable sections, and which popular picks now face too much early resistance. In Madrid, serve quality and first-strike control still matter more than at slower clay events, but bracket shape now decides which profiles are truly actionable."
+            "ATP Fantasy still ran through the familiar structure of a <strong>100-credit</strong> budget, <strong>six starters</strong>, <strong>two alternates</strong>, and one <strong>Bonus Ball</strong> player scoring double. In a standalone Masters 1000 week, completed results reinforced the same core lesson: advancement remains the cleanest path to a strong total, but in Madrid, efficient wins can widen the gap fast.",
+            "The finished week also underlined that Madrid is not just generic clay. Players who could hold serve, shorten points, and avoid messy early-round battles gave fantasy managers the best return. The lineups that scored best generally paired one or two elite anchors with mid-tier names who actually converted their section rather than simply projecting well on paper."
           ],
           "pills": [
             "+2 per ace",
@@ -65,33 +65,33 @@
             "-2 per double fault",
             "-20 upset loss"
           ],
-          "subtitle": "Best Week 4 Angles",
+          "subtitle": "Results Edition Themes",
           "bullets": [
-            "Anchor builds with one elite title favorite whose section looks manageable.",
-            "Treat Madrid as faster clay, not baseline-only clay.",
-            "Use live-ranking prices as a guide, then let the draw break ties.",
-            "Downgrade popular names if their quarter is overloaded early."
+            "Completed wins mattered more than pre-week draw optimism.",
+            "Bonus Ball success was tied to reliable advancement, not just ceiling.",
+            "Madrid-specific power translated when backed by a manageable route.",
+            "Misses usually came from early exits in premium roster spots."
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Draw Update Priorities",
+          "title": "Fantasy Lessons From The Week",
           "items": [
             {
-              "tag": "Best bracket reads",
-              "body": "The strongest fantasy builds now come from players with both title equity and a route that does not force too many coin-flip matches too early. If a favorite avoided dangerous floaters and heavy-hitting early opposition, that matters immediately."
+              "tag": "Best roster construction lesson",
+              "body": "Balanced builds still worked, but only when the cheaper pieces had real path-to-points potential. Saving credits without securing advancement rarely paid off."
             },
             {
-              "tag": "Best scoring environment",
-              "body": "Madrid still boosts the value of aces, holds, and straight-sets wins more than a slower clay event would. Players who can protect serve and finish sets cleanly gain extra fantasy appeal once their path looks stable."
+              "tag": "Best scoring lesson",
+              "body": "Aces, holds, and straight-sets wins remained meaningful edges in Madrid conditions. Players who won cleanly outperformed grinders who needed long, volatile matches."
             },
             {
-              "tag": "Best use of alternates",
-              "body": "Alternates matter more after the draw because they let you cover volatile sections without fully committing starter spots. Use them on upside names whose path is playable but not fully trustworthy."
+              "tag": "Best process takeaway",
+              "body": "The strongest pre-lock reads were still the ones built around section clarity and conversion probability. Madrid rewarded players who could turn favorable conditions into actual progression."
             },
             {
-              "tag": "Best fade signal",
-              "body": "If a player is expensive, popular, and sitting in a crowded section with multiple dangerous hitters, that is often enough to move off the play. Draw friction can erase even strong event fit."
+              "tag": "Best caution flag",
+              "body": "Results again showed that popularity is not protection. Expensive or trendy names can still become lineup traps if they fail to survive the early rounds."
             }
           ]
         }
@@ -102,37 +102,37 @@
       "cards": [
         {
           "kind": "pick-list",
-          "title": "Bonus Ball Board",
+          "title": "Top Performer Archetypes",
           "items": [
             {
-              "tag": "1. Carlos Alcaraz",
-              "body": "Alcaraz remains the most natural Madrid Bonus Ball candidate if his route is even reasonably clean. His event-specific ceiling is elite, and these conditions still amplify his ability to take control quickly."
+              "tag": "Elite title threats",
+              "body": "The safest fantasy returns came from top-end players who matched ranking strength with actual week-long stability. When elite players advanced cleanly, they remained the foundation of winning builds."
             },
             {
-              "tag": "2. Jannik Sinner",
-              "body": "Sinner is still the safest elite Bonus Ball alternative. If you prefer stability over pure event-specific upside, he remains one of the strongest double-score anchors on the board."
+              "tag": "Serve-first clay attackers",
+              "body": "Madrid continued to reward players whose serve and first-strike patterns translated to altitude clay. These profiles often created stronger ace totals and cleaner set margins than slower-clay specialists."
             },
             {
-              "tag": "3. Alexander Zverev",
-              "body": "Zverev stays firmly in the Bonus Ball mix because Madrid can reward his serve and first-strike patterns in a big way. If his quarter is not overloaded, he becomes one of the best leverage captain-style plays."
+              "tag": "Mid-tier section converters",
+              "body": "Some of the best value came from players outside the very top tier who simply took advantage of a playable section. In a one-event slate, reaching one extra round can be the difference between average and excellent value."
             }
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Core Plays",
+          "title": "Bonus Ball Review",
           "items": [
             {
-              "tag": "Carlos Alcaraz",
-              "body": "Still one of the clearest core plays because his Madrid fit and title-winning ceiling are obvious. If the draw did not hand him an immediate gauntlet, he belongs near the center of roster construction."
+              "tag": "Best Bonus Ball profile",
+              "body": "The strongest Bonus Ball outcomes came from players with both title-level upside and a stable route through the scoring window. Reliability mattered as much as raw ceiling."
             },
             {
-              "tag": "Jannik Sinner",
-              "body": "Sinner remains a premium core option thanks to his elite weekly floor and reliable deep-run profile. He does not need the perfect section to stay relevant, though a cleaner route only strengthens the case."
+              "tag": "What worked",
+              "body": "Using the multiplier on a premium favorite with strong advancement equity remained the cleanest strategy. Madrid still rewarded backing players who could stack wins rather than chase one-off volatility."
             },
             {
-              "tag": "Alexander Zverev",
-              "body": "Zverev remains one of the strongest non-top-two core plays on this slate. In Madrid, his serve profile can create both safety and spike scoring if the bracket gives him room to settle in."
+              "tag": "What missed",
+              "body": "Bonus Ball choices became costly when managers chased matchup-specific upside without enough path security. On a single-event week, a short run from your multiplier spot was hard to recover from."
             }
           ]
         }
@@ -143,55 +143,55 @@
       "cards": [
         {
           "kind": "pick-list",
-          "title": "Value Targets",
+          "title": "Outperformers",
           "items": [
             {
-              "tag": "Andrey Rublev",
-              "body": "Rublev stays on the value radar because Madrid is one of the clay events where his aggressive patterns can still scale. If his section is not packed with elite return pressure, he becomes much more attractive."
+              "tag": "Premium anchors who delivered",
+              "body": "The best-performing expensive picks were the ones who justified their salary with progression and efficient match scoring. In Madrid, paying up worked when those stars actually converted their draw position."
             },
             {
-              "tag": "Ben Shelton",
-              "body": "Shelton remains the kind of upside value who can matter more here than on slower clay. If the draw gives him a path without immediate top-tier returners, the ace scoring can make him a real lineup piece."
+              "tag": "Undervalued power profiles",
+              "body": "Players priced below the elite tier but suited to altitude clay often returned strong value if they found early rhythm. This was the clearest outperformer lane of the week."
             },
             {
-              "tag": "Joao Fonseca",
-              "body": "Fonseca still fits the upside-value archetype when price lags behind threat level. In a draw where he is not immediately blocked by elite seeds, his attacking game can become fantasy relevant quickly."
+              "tag": "Playable-section risers",
+              "body": "Managers who identified open pockets of the draw were often rewarded. A manageable route remained one of the strongest predictors of fantasy overperformance."
             },
             {
-              "tag": "Serve-first risers in open sections",
-              "body": "This is still the week to scan for players whose ranking-based price has not fully caught up to current level. If they landed in a manageable pocket and can bank holds, they deserve serious consideration."
+              "tag": "Alternates with real upside",
+              "body": "Alternate spots were most useful when they covered volatile but live names in favorable sections. Even without starring in every lineup, that flexibility mattered."
             }
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Trap List",
+          "title": "Misses And Traps",
           "items": [
             {
-              "tag": "Crowded-quarter stars",
-              "body": "Even elite names can become inefficient if their quarter is loaded with dangerous early-round opponents. If the route is full of live hitters, the price can stop making sense."
+              "tag": "Early-exit premium names",
+              "body": "The biggest fantasy misses were expensive players who failed to turn reputation into advancement. On a Madrid-only slate, those losses were difficult to offset elsewhere."
             },
             {
-              "tag": "Slow-clay specialists in bad sections",
-              "body": "Madrid does not reward every clay profile equally. If a player depends on long rallies and also drew power opponents, the fantasy ceiling can flatten fast."
+              "tag": "Crowded-quarter gambles",
+              "body": "Backing too many players from one dangerous section often backfired. Even strong fits can disappoint when the route is packed with live opposition."
             },
             {
-              "tag": "Popular names with workload or form uncertainty",
-              "body": "Draw quality cannot fully erase physical or rhythm concerns. If a player enters with recent workload questions or unclear form, the downside remains real even in a decent section."
+              "tag": "Slow-build clay specialists",
+              "body": "Players who rely on long rallies and attritional scoring were less reliable if they could not control matches in these conditions. Madrid still favored cleaner first-strike tennis."
             }
           ]
         }
       ]
     }
   ],
-  "footer_note": "Draw update refreshed on <strong>18 April 2026</strong> using official ATP Madrid event timing, current ATP live-ranking context, and the live draw/scores hub. Focus lineup decisions on bracket shape, section difficulty, and Bonus Ball path quality.",
+  "footer_note": "Results edition updated for the completed fantasy week of <strong>20-26 April 2026</strong> using official ATP event timing and ATP scores/results context for Madrid. Use this recap to refine future decisions around advancement equity, Bonus Ball stability, and which clay-power profiles actually convert in Madrid conditions.",
   "output": "week-4.html",
-  "archive_summary": "Draw update ATP Fantasy read for Week 4 centered on Madrid, shifting the focus from pre-draw theory to bracket shape, Bonus Ball leverage, core plays, value targets, and trap sections after the official draw.",
+  "archive_summary": "Results edition ATP Fantasy recap for Week 4 centered on Madrid, highlighting completed-week takeaways, successful roster archetypes, Bonus Ball lessons, outperformers, misses, and what the finished scoring environment meant for fantasy players.",
   "publish": {
-    "filename": "2026-week-4-draw-update.html",
+    "filename": "2026-week-4-results.html",
     "week": "Week 4",
-    "label": "Week 4 Draw Update",
-    "updated_at": "2026-04-18T14:01:17-05:00",
+    "label": "Week 4 Results",
+    "updated_at": "2026-04-20T08:01:26-05:00",
     "live": true,
     "draft": false
   }
