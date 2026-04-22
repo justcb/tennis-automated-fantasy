@@ -192,7 +192,7 @@
     "week": "Week 4",
     "label": "Week 4 Results",
     "updated_at": "2026-04-20T08:01:26-05:00",
-    "live": true,
+    "live": false,
     "draft": false
   }
 }
