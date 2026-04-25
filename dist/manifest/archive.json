@@ -2,12 +2,21 @@
   "pages": [
     {
       "week": "Week 5",
+      "label": "Week 5 Draw Update",
+      "updated_at": "2026-04-25T14:00:56-05:00",
+      "relative_url": "/pages/2026-week-5-draw-update.html",
+      "url": "https://fantasy.tennisautomated.com/pages/2026-week-5-draw-update.html",
+      "headline": "Week 5 Draw Update Cheat Sheet",
+      "source": "data/week-5.json"
+    },
+    {
+      "week": "Week 5",
       "label": "Week 5 Pre-Draw Edition",
       "updated_at": "2026-04-22T08:01:37-05:00",
       "relative_url": "/pages/2026-week-5-pre-draw.html",
       "url": "https://fantasy.tennisautomated.com/pages/2026-week-5-pre-draw.html",
       "headline": "Week 5 Pre-Draw Cheat Sheet",
-      "source": "data/week-5.json"
+      "source": "data/week-5-pre-draw.json"
     },
     {
       "week": "Week 4",
