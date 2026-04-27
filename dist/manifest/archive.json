@@ -2,12 +2,21 @@
   "pages": [
     {
       "week": "Week 5",
+      "label": "Week 5 Results",
+      "updated_at": "2026-04-27T08:00:34-05:00",
+      "relative_url": "/pages/2026-week-5-results.html",
+      "url": "https://fantasy.tennisautomated.com/pages/2026-week-5-results.html",
+      "headline": "Week 5 Results Cheat Sheet",
+      "source": "data/week-5.json"
+    },
+    {
+      "week": "Week 5",
       "label": "Week 5 Draw Update",
       "updated_at": "2026-04-25T14:00:56-05:00",
       "relative_url": "/pages/2026-week-5-draw-update.html",
       "url": "https://fantasy.tennisautomated.com/pages/2026-week-5-draw-update.html",
       "headline": "Week 5 Draw Update Cheat Sheet",
-      "source": "data/week-5.json"
+      "source": "data/week-5-draw-update.json"
     },
     {
       "week": "Week 5",

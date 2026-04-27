@@ -1,8 +1,8 @@
 {
-  "page_title": "Tennis Automated | ATP Fantasy Week 5 Draw Update",
-  "eyebrow": "Tennis Automated | ATP Fantasy | Week 5 Draw Update",
-  "headline": "Week 5 Draw Update Cheat Sheet",
-  "dek": "Draw update for <strong>20-26 April 2026</strong>. Week 5 remains inside the <strong>Madrid ATP Masters 1000</strong> event window, which runs <strong>22 April - 3 May, 2026</strong>. With the official bracket now in focus, fantasy decisions shift from broad Madrid theory to section shape, advancement paths, Bonus Ball safety, and which roster spots still offer real value after the draw.",
+  "page_title": "Tennis Automated | ATP Fantasy Week 5 Results",
+  "eyebrow": "Tennis Automated | ATP Fantasy | Week 5 Results",
+  "headline": "Week 5 Results Cheat Sheet",
+  "dek": "Results recap for <strong>20-26 April 2026</strong>. Week 5 stayed inside the <strong>Madrid ATP Masters 1000</strong> event window, which runs <strong>22 April - 3 May, 2026</strong>. With the week now complete from a fantasy standpoint, the focus shifts to who actually delivered, which profiles outperformed expectations, where lineups missed, and what the finished Madrid action means for future ATP Fantasy decisions.",
   "meta": [
     {
       "label": "Week Window",
@@ -18,32 +18,32 @@
     },
     {
       "label": "Status",
-      "value": "Draw update edition"
+      "value": "Results edition"
     }
   ],
   "blocks": [
     {
       "type": "two-col-list",
-      "title": "Week 5 Draw Lens",
+      "title": "Week 5 Results Lens",
       "columns": [
         {
-          "heading": "What To Lean Into",
-          "body": "Once the draw is live, the biggest edge comes from reading path quality correctly. In Madrid, the best fantasy targets are still players with strong overall level and scoring-friendly styles, but bracket shape now decides which favorites are protected, which mid-tier names have room to run, and where a Bonus Ball can be deployed with confidence.",
+          "heading": "What Paid Off",
+          "body": "The biggest fantasy wins came from players who paired advancement with Madrid-friendly scoring. In this format, the strongest returns usually come from names who not only moved through the draw, but also stacked clean wins, ace production, and stable match control in altitude clay conditions.",
           "bullets": [
-            "Prioritize players with clean early routes and realistic multi-win paths.",
-            "Use section shape to separate true anchors from overpriced names.",
-            "Target value plays who avoid immediate collisions with top seeds.",
-            "Favor players whose serve and first-strike patterns can cash in quickly in Madrid conditions."
+            "Advancement still drove the best overall fantasy outcomes.",
+            "Aggressive scorers gained extra value when wins came cleanly.",
+            "Players with stable early-round control were safer Bonus Ball outcomes.",
+            "Open sections mattered most when players actually converted them into multiple wins."
           ]
         },
         {
-          "heading": "What To Fade",
-          "body": "The draw update is where lineup mistakes usually become clearer. Dangerous sections, early heavyweight matchups, and crowded value pockets can all reduce fantasy efficiency fast. In a one-event slate, avoiding obvious bracket traps matters almost as much as finding the right upside lane.",
+          "heading": "What Fell Short",
+          "body": "The misses were familiar: expensive names who failed to turn draw position into points, trendy values who could not survive their section, and volatile picks who looked attractive on paper but did not produce enough completed-week scoring.",
           "bullets": [
-            "Do not force expensive names through visibly difficult sections.",
-            "Be careful with trendy values packed into the same crowded pocket.",
-            "Avoid Bonus Ball exposure on players with shaky early-round paths.",
-            "Do not confuse clay comfort with actual draw-based advancement equity."
+            "Premium salaries hurt when they did not return multi-win value.",
+            "Popular sleeper picks were costly if they stalled early.",
+            "Dangerous sections punished lineups that chased ceiling over path security.",
+            "One-event slates left little room to recover from early exits."
           ]
         }
       ]
@@ -53,10 +53,10 @@
       "cards": [
         {
           "kind": "rich-text",
-          "title": "What Matters After The Draw",
+          "title": "What Mattered In The Finished Week",
           "paragraphs": [
-            "ATP Fantasy still runs through the familiar <strong>100-credit</strong> build with <strong>six starters</strong>, <strong>two alternates</strong>, and one <strong>Bonus Ball</strong> player scoring double. In a Madrid-only week, the official draw is the key unlock because it turns broad player preference into actual path analysis.",
-            "The post-draw edge is simple: identify which players combine talent, fit, and bracket stability. Madrid's altitude clay can still reward aggressive serving and first-strike tennis, but now the sharper question is who gets the cleanest route to stack wins, straight-set bonuses, and ace volume without running into immediate danger."
+            "ATP Fantasy still ran through the familiar <strong>100-credit</strong> build with <strong>six starters</strong>, <strong>two alternates</strong>, and one <strong>Bonus Ball</strong> player scoring double. In a Madrid-only week, the completed results made one lesson clear: fantasy value came from converting opportunity into actual wins, not just landing in a promising section.",
+            "Madrid's altitude clay again rewarded players who could protect serve, play first-strike tennis, and keep scoreboard pressure on opponents. For fantasy managers, the best performers were the ones who combined progression with scoring efficiency, while many of the weaker returns came from picks that needed too many things to break right."
           ],
           "pills": [
             "+2 per ace",
@@ -65,33 +65,33 @@
             "-2 per double fault",
             "-20 upset loss"
           ],
-          "subtitle": "Draw Update Themes",
+          "subtitle": "Results Edition Themes",
           "bullets": [
-            "Bracket shape now drives most close fantasy decisions.",
-            "Bonus Ball choices should start with route safety.",
-            "Value improves when a player lands in an open section.",
-            "Crowded quarters can turn good names into weak fantasy plays."
+            "Completed wins mattered more than pre-lock draw optimism.",
+            "Bonus Ball success depended on both ceiling and conversion.",
+            "Value picks worked best when they turned open paths into real points.",
+            "Misses often came from overrating theoretical upside."
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Fantasy Priorities This Week",
+          "title": "Fantasy Takeaways From The Week",
           "items": [
             {
-              "tag": "Best roster construction angle",
-              "body": "Build around one or two players with stable advancement outlooks, then use the remaining salary on names whose sections offer realistic paths to multiple wins."
+              "tag": "Best roster construction lesson",
+              "body": "Balanced builds were rewarded when they captured multiple players who actually advanced, rather than overcommitting to one fragile section or one expensive name."
             },
             {
-              "tag": "Best scoring angle",
-              "body": "Look for players who can pair draw safety with Madrid-friendly scoring traits such as ace upside, hold stability, and straight-sets potential."
+              "tag": "Best scoring lesson",
+              "body": "Players with serve-driven or first-strike scoring profiles remained especially useful when they paired that style with match control and straight-sets potential."
             },
             {
-              "tag": "Best process angle",
-              "body": "Use the official bracket to compare route difficulty, likely early-round resistance, and whether a player's section is opening or congested."
+              "tag": "Best process lesson",
+              "body": "Path analysis still mattered, but only when paired with realistic form and scoring fit. A good section alone was not enough."
             },
             {
               "tag": "Best caution flag",
-              "body": "If a player needs several upset-level wins just to justify salary, that is usually a sign the draw has made them a weaker fantasy investment."
+              "body": "If a pick depended on surviving several dangerous rounds just to justify salary, the downside was usually too high for a one-event fantasy slate."
             }
           ]
         }
@@ -102,41 +102,41 @@
       "cards": [
         {
           "kind": "pick-list",
-          "title": "Core Plays After The Draw",
+          "title": "Top Performer Profiles",
           "items": [
             {
-              "tag": "Protected premium anchors",
-              "body": "The strongest core plays are top-end names who landed in manageable sections and still project for deep-run equity without immediate bracket stress."
+              "tag": "Premium anchors who delivered",
+              "body": "The strongest premium returns came from top-end players who handled their early assignments cleanly and preserved deep-run equity through the week."
             },
             {
-              "tag": "Stable mid-tier starters",
-              "body": "Mid-range players become core options when the draw gives them a realistic route through the opening rounds and enough scoring upside to beat salary."
+              "tag": "Mid-tier outperformers",
+              "body": "The best mid-range fantasy outcomes came from players who turned manageable sections into multiple wins and beat salary without needing a surprise title push."
             },
             {
-              "tag": "Section winners to target",
-              "body": "When one pocket of the bracket looks softer than the rest, players positioned to capitalize there deserve extra fantasy attention even if they were only secondary targets pre-draw."
+              "tag": "Section converters",
+              "body": "The most useful picks were not just players who landed in favorable pockets, but the ones who actually capitalized on those openings with completed-week production."
             }
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Bonus Ball Board",
+          "title": "Bonus Ball Review",
           "items": [
             {
-              "tag": "Best Bonus Ball profile",
-              "body": "The ideal multiplier remains a player with both title-level ceiling and a clean enough route to avoid early volatility."
+              "tag": "What worked",
+              "body": "The best Bonus Ball outcomes generally came from players with both advancement safety and enough scoring punch to separate from the field."
             },
             {
-              "tag": "Strong default approach",
-              "body": "If one premium favorite clearly has the safest section among the top options, that player is usually the cleanest Bonus Ball starting point."
+              "tag": "Strong default lesson",
+              "body": "When a premium favorite had the cleanest route and converted it, that remained the most reliable multiplier approach."
             },
             {
-              "tag": "When to get aggressive",
-              "body": "A mid-tier Bonus Ball can work if the bracket opens dramatically around them and their path to several wins looks cleaner than the expensive alternatives."
+              "tag": "When aggression paid",
+              "body": "A more aggressive Bonus Ball could work when a non-premium player found a genuinely open lane and turned it into several wins."
             },
             {
-              "tag": "What to avoid",
-              "body": "Do not chase a dangerous quarter just because the ceiling is high. In a one-event slate, early bracket friction can ruin the multiplier spot quickly."
+              "tag": "What hurt",
+              "body": "The biggest multiplier misses came from chasing volatility in dangerous sections where one early stumble erased double-score upside."
             }
           ]
         }
@@ -147,59 +147,59 @@
       "cards": [
         {
           "kind": "pick-list",
-          "title": "Value Targets",
+          "title": "Who Beat Expectations",
           "items": [
             {
               "tag": "Open-pocket risers",
-              "body": "The best values often come from players who landed in sections without immediate elite opposition and now have a clearer path to two or more wins."
+              "body": "Players who emerged from softer sections and banked multiple wins were the clearest value successes of the week."
             },
             {
-              "tag": "Madrid-fit power values",
-              "body": "Players outside the premium tier gain appeal when their serve and first-strike patterns align with Madrid conditions and the draw does not force them into instant survival mode."
+              "tag": "Madrid-fit scorers",
+              "body": "Serve-forward and first-strike profiles again proved useful when they translated conditions into aces, holds, and efficient wins."
             },
             {
-              "tag": "Alternate stash options",
-              "body": "Use alternate spots on live names whose bracket placement gives them real upside if your main lineup needs flexibility closer to lock."
+              "tag": "Useful alternate outcomes",
+              "body": "Alternate-level names were most valuable when they offered real advancement equity rather than just low-cost exposure."
             },
             {
-              "tag": "Salary relief with purpose",
-              "body": "Cheap plays are only worth it if the draw gives them a believable route to score, not just a recognizable name or surface label."
+              "tag": "Salary relief that mattered",
+              "body": "Cheap picks only helped when they produced actual points. The best bargains were the ones who gave lineups flexibility without sacrificing win potential."
             }
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Traps After The Draw",
+          "title": "Where Lineups Missed",
           "items": [
             {
-              "tag": "Crowded-quarter premiums",
-              "body": "Even elite players can become poor fantasy values if their section is loaded with dangerous early opponents and little margin for clean scoring."
+              "tag": "Crowded-quarter disappointments",
+              "body": "Even strong names became weak fantasy investments when difficult sections prevented them from delivering enough completed-week value."
             },
             {
-              "tag": "Overhyped draw winners",
-              "body": "Not every player in an open section is automatically a smash play. Make sure the underlying level and scoring profile still support the pick."
+              "tag": "Overhyped value misses",
+              "body": "Some popular lower-cost plays looked attractive after the draw but failed to back it up with wins or scoring volume."
             },
             {
-              "tag": "Pure clay grinders",
-              "body": "Madrid does not always reward slower, attritional fantasy profiles as much as traditional clay assumptions suggest, especially if the bracket offers little straight-sets upside."
+              "tag": "Low-ceiling clay assumptions",
+              "body": "Traditional clay comfort alone was not enough in Madrid if the player profile lacked ace upside, straight-set potential, or realistic advancement."
             },
             {
-              "tag": "Duplicate exposure mistakes",
-              "body": "Stacking too many players from the same fragile section can cap lineup upside and increase the chance one bad pocket sinks the build."
+              "tag": "Too much section overlap",
+              "body": "Lineups that stacked exposure in one fragile pocket often lost too much equity when that part of the draw broke the wrong way."
             }
           ]
         }
       ]
     }
   ],
-  "footer_note": "Draw update edition for the fantasy week of <strong>20-26 April 2026</strong> within the official ATP Madrid event window of <strong>22 April - 3 May, 2026</strong>. Use the bracket to sharpen core plays, Bonus Ball decisions, value targets, and trap avoidance now that the path structure is in view.",
+  "footer_note": "Results edition for the fantasy week of <strong>20-26 April 2026</strong> within the official ATP Madrid event window of <strong>22 April - 3 May, 2026</strong>. Use the completed week to refine how you value advancement, Bonus Ball safety, scoring profile, and section quality in future ATP Fantasy builds.",
   "output": "week-5.html",
-  "archive_summary": "Draw update ATP Fantasy page for Week 5 centered on Madrid, shifting the focus to bracket shape, route quality, Bonus Ball strategy, core plays, value targets, and post-draw traps within the 20-26 April fantasy window.",
+  "archive_summary": "Results edition ATP Fantasy page for Week 5 centered on Madrid, recapping completed-week takeaways, top performer profiles, Bonus Ball outcomes, value hits, lineup misses, and the main fantasy lessons from the 20-26 April window.",
   "publish": {
-    "filename": "2026-week-5-draw-update.html",
+    "filename": "2026-week-5-results.html",
     "week": "Week 5",
-    "label": "Week 5 Draw Update",
-    "updated_at": "2026-04-25T14:00:56-05:00",
+    "label": "Week 5 Results",
+    "updated_at": "2026-04-27T08:00:34-05:00",
     "live": true,
     "draft": false
   }
