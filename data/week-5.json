@@ -200,7 +200,7 @@
     "week": "Week 5",
     "label": "Week 5 Results",
     "updated_at": "2026-04-27T08:00:34-05:00",
-    "live": true,
+    "live": false,
     "draft": false
   }
 }

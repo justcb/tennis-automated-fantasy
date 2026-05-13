@@ -1,0 +1,210 @@
+{
+  "page_title": "Tennis Automated | ATP Fantasy Week 1921",
+  "eyebrow": "Tennis Automated | ATP Fantasy | Week 1921 Draw Update",
+  "headline": "Week 1921 Cheat Sheet",
+  "dek": "Draw update edition for the Week 1921 ATP Fantasy slate. With primary ATP draw and rankings packets unavailable in this cycle, this board stays conservative: focus on bracket shape, Bonus Ball discipline, core advancement paths, and value that does not require multiple coin-flip wins.",
+  "meta": [
+    {
+      "label": "Week Window",
+      "value": "Week 1921"
+    },
+    {
+      "label": "Slate",
+      "value": "ATP Fantasy draw update"
+    },
+    {
+      "label": "Surface",
+      "value": "Official draw review"
+    },
+    {
+      "label": "Status",
+      "value": "Conservative update pending fuller ATP packet access"
+    },
+    {
+      "label": "Edition",
+      "value": "Draw Update"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "two-col-list",
+      "title": "Week 1921 Draw Update Lens",
+      "columns": [
+        {
+          "heading": "What To Prioritize",
+          "body": "Now that the slate has moved into draw-update mode, the biggest edge comes from reading bracket shape correctly. The best builds usually start with players whose section gives them believable multi-round equity without needing repeated upsets, then layer in scoring traits like ace volume, hold stability, and straight-sets potential. Bonus Ball decisions should follow the same logic: path first, ceiling second.",
+          "bullets": [
+            "Advancement equity remains the first filter after the draw.",
+            "Target players with clean early-round routes and stable serve profiles.",
+            "Use bracket pockets to separate true core plays from merely interesting names.",
+            "Let Bonus Ball exposure follow the safest path to multiple wins."
+          ]
+        },
+        {
+          "heading": "What To Avoid",
+          "body": "The most common draw-week mistakes come from forcing upside where the bracket does not support it. A dangerous section, an early clash between similarly priced options, or a path that requires too many toss-up wins can turn a popular name into a trap quickly. Cheap players still need a realistic route, and premium players still need enough bracket clarity to justify the spend.",
+          "bullets": [
+            "Do not pay premium salary for a crowded lane with multiple live threats.",
+            "Avoid stacking too many players from the same contested section.",
+            "Cheap value is less useful if one difficult opener likely ends the run.",
+            "Do not chase Bonus Ball volatility when the bracket offers steadier anchors."
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "cards": [
+        {
+          "kind": "rich-text",
+          "title": "What Matters Most After The Draw",
+          "paragraphs": [
+            "ATP Fantasy still rewards the same core structure: <strong>100 credits</strong>, <strong>six starters</strong>, <strong>two alternates</strong>, and one <strong>Bonus Ball</strong> player scoring double. In the draw-update view, the key shift is simple: roster decisions should now be driven by route quality. The strongest plays are the ones who combine a manageable section with repeatable scoring tools such as ace production, hold reliability, and enough return pressure to avoid living entirely on tiebreak variance.",
+            "Because the primary ATP draw and rankings packets were unavailable in this update cycle, this edition stays intentionally conservative on player-specific claims. That makes process even more important. Favor players whose bracket lane appears cleaner, whose scoring profile can capitalize on shorter matches, and whose salary does not require an unrealistic run. The best Week 1921 builds should come from balancing bracket safety with enough upside to separate if your core names reach the later rounds."
+          ],
+          "pills": [
+            "+2 per ace",
+            "+10 straight-sets win",
+            "+20 upset win",
+            "-2 per double fault",
+            "-20 upset loss"
+          ],
+          "subtitle": "Draw Update Themes",
+          "bullets": [
+            "Bracket shape matters more now than broad pre-draw theory.",
+            "Bonus Ball should usually sit on the clearest advancement path.",
+            "Value targets need both price relief and a playable route.",
+            "Trap detection starts with crowded sections and fragile early paths."
+          ]
+        },
+        {
+          "kind": "pick-list",
+          "title": "Fantasy Priorities For The Official Bracket",
+          "items": [
+            {
+              "tag": "Best roster construction starting point",
+              "body": "Begin with two or three players whose sections look clean enough to support multiple wins, then fill around them with value that does not depend on a chain of upsets."
+            },
+            {
+              "tag": "Best scoring starting point",
+              "body": "Prioritize players who can pair advancement equity with ace volume and efficient match control, since those profiles can stack points quickly once the route is favorable."
+            },
+            {
+              "tag": "Best process starting point",
+              "body": "Read each quarter for congestion, identify where seeded danger is concentrated, and prefer players whose early rounds look less taxing than their similarly priced alternatives."
+            },
+            {
+              "tag": "Best caution flag",
+              "body": "If a popular name sits in a section full of credible servers, dangerous floaters, or likely long matches, that player may be a weaker fantasy spend than the salary suggests."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "cards": [
+        {
+          "kind": "pick-list",
+          "title": "Core Plays After The Draw",
+          "items": [
+            {
+              "tag": "Premium anchors",
+              "body": "The best expensive plays are the ones with the cleanest route to the late rounds, not just the biggest names on the slate. If a top salary lands in a stable section, that player becomes the natural starting point."
+            },
+            {
+              "tag": "Mid-tier foundations",
+              "body": "The strongest mid-range options are players whose bracket gives them a realistic path to two wins while still carrying enough serve or return quality to post useful scoring totals."
+            },
+            {
+              "tag": "Section winners to back",
+              "body": "When one pocket of the draw looks materially softer than the rest, that is often where the most important core fantasy exposure lives."
+            }
+          ]
+        },
+        {
+          "kind": "pick-list",
+          "title": "Bonus Ball Board",
+          "items": [
+            {
+              "tag": "Best default approach",
+              "body": "Place the Bonus Ball on the player with the clearest combination of advancement equity and efficient scoring potential. The multiplier is usually strongest when attached to stability."
+            },
+            {
+              "tag": "When to get aggressive",
+              "body": "An aggressive Bonus Ball can work if the draw reveals a non-obvious player with a genuinely open lane and a profile built to pile up aces or straight-set wins."
+            },
+            {
+              "tag": "What usually fails",
+              "body": "The weakest multiplier bets are volatile names in crowded sections, especially when they need multiple close wins just to reach the scoring rounds that matter."
+            },
+            {
+              "tag": "Tiebreaker mindset",
+              "body": "If two candidates project similarly, lean toward the player less likely to spend the week in long, high-variance matches."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "grid",
+      "cards": [
+        {
+          "kind": "pick-list",
+          "title": "Value Targets And Alternates",
+          "items": [
+            {
+              "tag": "Best value shape",
+              "body": "The most useful salary relief comes from players priced below the top tier who still have a believable path through the opening rounds."
+            },
+            {
+              "tag": "Bracket-assisted risers",
+              "body": "A modestly priced player becomes much more interesting when the draw removes one or two obvious obstacles from that section."
+            },
+            {
+              "tag": "Alternate priorities",
+              "body": "Use alternate spots on players with real advancement equity in playable lanes, not just the cheapest names available."
+            },
+            {
+              "tag": "Portable scoring traits",
+              "body": "Serve-led players with enough baseline stability remain attractive value targets because they can score even before a deep run fully develops."
+            }
+          ]
+        },
+        {
+          "kind": "pick-list",
+          "title": "Where Lineups Could Miss",
+          "items": [
+            {
+              "tag": "Crowded-quarter traps",
+              "body": "Avoid overcommitting to sections where several credible contenders can knock each other out before fantasy totals have time to build."
+            },
+            {
+              "tag": "False value",
+              "body": "A low salary is not enough if the opener is difficult and the second-round path is even worse. Cheap exits still sink lineups."
+            },
+            {
+              "tag": "Name-brand overconfidence",
+              "body": "Well-known players can be poor fantasy investments when the bracket gives them no margin for error relative to price."
+            },
+            {
+              "tag": "Bonus Ball overreach",
+              "body": "Doubling a volatile player in a dangerous lane is one of the fastest ways to lose the week, even if the upside looks tempting on paper."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "footer_note": "Draw update edition refreshed on <strong>2026-05-09</strong>. Updated by Lina's autonomous fantasy cycle using available source packets; because primary ATP draw and rankings access was incomplete in this cycle, player-specific claims remain intentionally conservative.",
+  "output": "week-1921.html",
+  "archive_summary": "Draw update ATP Fantasy read for Week 1921 with a conservative, bracket-first approach focused on core plays, Bonus Ball discipline, value targets, and common traps.",
+  "publish": {
+    "filename": "2026-week-1921-draw-update.html",
+    "week": "Week 1921",
+    "label": "Week 1921 Draw Update",
+    "updated_at": "2026-05-09T14:01:05-05:00",
+    "live": false,
+    "draft": false
+  }
+}
