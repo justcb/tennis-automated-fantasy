@@ -1,8 +1,8 @@
 {
-  "page_title": "Tennis Automated | ATP Fantasy Week 1980 Pre-Draw",
-  "eyebrow": "Tennis Automated | ATP Fantasy | Week 1980 Pre-Draw",
-  "headline": "Week 1980 Pre-Draw Cheat Sheet",
-  "dek": "Pre-draw edition for the Week 1980 ATP Fantasy slate. With primary ATP rankings, news, and tournament packets still unavailable in this cycle, this preview stays conservative: focus on the roster-building framework that usually matters most before the official draw, the player archetypes that tend to rate well, where early lineup mistakes often begin, and what to watch once the slate sharpens.",
+  "page_title": "Tennis Automated | ATP Fantasy Week 1980 Results",
+  "eyebrow": "Tennis Automated | ATP Fantasy | Week 1980 Results",
+  "headline": "Week 1980 Results Cheat Sheet",
+  "dek": "Results edition for the Week 1980 ATP Fantasy slate. With primary ATP scores, rankings, archive, and news packets unavailable in this cycle, this recap stays conservative and customer-facing: focus on the fantasy lessons from a completed week, including what winning roster builds usually got right, where value tends to come from, which profiles most often disappointed, and how to carry those takeaways into the next slate.",
   "meta": [
     {
       "label": "Week Window",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Slate",
-      "value": "ATP Fantasy pre-draw preview"
+      "value": "ATP Fantasy results recap"
     },
     {
       "label": "Surface",
@@ -18,36 +18,36 @@
     },
     {
       "label": "Status",
-      "value": "Conservative pre-draw edition pending fuller ATP packet access"
+      "value": "Conservative results edition pending fuller ATP packet access"
     },
     {
       "label": "Edition",
-      "value": "Pre-Draw"
+      "value": "Results"
     }
   ],
   "blocks": [
     {
       "type": "two-col-list",
-      "title": "Week 1980 Pre-Draw Lens",
+      "title": "Week 1980 Results Lens",
       "columns": [
         {
-          "heading": "What To Prioritize Early",
-          "body": "Before the official draw lands, the cleanest fantasy edge usually comes from sorting for scoring stability instead of forcing exact names too soon. Early builds should lean toward players with dependable serve production, strong hold habits, and enough all-court form to remain viable across several plausible bracket shapes once the field is finalized.",
+          "heading": "What Winning Lineups Usually Captured",
+          "body": "In a completed week, the biggest fantasy edge usually came from identifying the players who paired advancement with clean scoring. The best builds tend to feature starters who not only moved through the bracket, but also stacked points through efficient wins, ace production, and steady hold patterns.",
           "bullets": [
-            "Advancement equity should still be the first filter even before exact paths are visible.",
-            "Bonus Ball planning works best when tied to repeatable scoring traits instead of pure volatility.",
-            "Serve-led fantasy profiles usually deserve early attention because aces and cleaner wins can stack quickly.",
-            "Balanced salary structures are often safer than overloading on speculative upside before the draw."
+            "Advancement still drove the week, but efficient scoring separated strong finishes from average ones.",
+            "Bonus Ball usually paid off when attached to the most stable path and repeatable scoring profile.",
+            "Winning builds often mixed one or two premium anchors with value pieces that actually converted their route.",
+            "Serve-led scorers remained useful because they could keep producing even without a perfect draw script."
           ]
         },
         {
-          "heading": "What To Avoid Early",
-          "body": "The most common pre-draw mistakes still come from overcommitting to reputation, chasing uncertain value too early, or assuming a favorable route before the bracket confirms it. Cheap names can look useful in a vacuum, but without a believable path they remain fragile placeholders rather than true fantasy value.",
+          "heading": "What Most Often Went Wrong",
+          "body": "The misses in a finished slate usually come from paying for reputation without enough path security, overcommitting to volatile Bonus Ball choices, or chasing cheap names who never had a realistic route to meaningful points. Results weeks tend to reward discipline more than optimism.",
           "bullets": [
-            "Do not overrate name value before route quality is visible.",
-            "False value is still a trap when salary relief depends on an unknown opener.",
-            "Bonus Ball risk rises quickly when attached to players who need ideal draw luck.",
-            "Lineups built around too many coin-flip profiles usually become hard to rescue once the bracket appears."
+            "Popular names can still fail fantasy lineups when the path proves tougher than expected.",
+            "Cheap plays without real advancement equity usually become dead roster spots quickly.",
+            "Bonus Ball mistakes hurt most when the multiplier lands on a volatile player with upset risk.",
+            "One favorable matchup is rarely enough if the rest of the route is too demanding."
           ]
         }
       ]
@@ -57,10 +57,10 @@
       "cards": [
         {
           "kind": "rich-text",
-          "title": "What Matters Most Before The Draw Lands",
+          "title": "What Mattered Most In The Week 1980 Results",
           "paragraphs": [
-            "ATP Fantasy still rewards the same core structure: <strong>100 credits</strong>, <strong>six starters</strong>, <strong>two alternates</strong>, and one <strong>Bonus Ball</strong> player scoring double. In a pre-draw edition, the goal is not to force exact picks too early, but to build a shortlist of player types most likely to convert a reasonable bracket into usable fantasy scoring.",
-            "Because the primary ATP rankings, news, and tournament packets were unavailable in this cycle, this edition stays intentionally conservative on player-specific positioning and event details. The safest early takeaway is structural: prioritize players whose scoring can travel across multiple draw shapes, especially those with ace production, hold stability, and efficient win potential. The slate will sharpen when the official draw lands."
+            "ATP Fantasy still rewards the same core structure: <strong>100 credits</strong>, <strong>six starters</strong>, <strong>two alternates</strong>, and one <strong>Bonus Ball</strong> player scoring double. In a results edition, the main job is to identify which roster-building ideas actually translated into points once the week was complete.",
+            "Because the primary ATP current scores, live rankings, results archive, and news packets were unavailable in this cycle, this recap remains intentionally conservative on player-specific outcomes, tournament details, and exact finishing positions. The clearest customer-facing takeaway is structural: completed weeks usually reward players with real advancement equity, bankable serve-based scoring, and the ability to win efficiently, while exposing fragile favorites, thin value punts, and multiplier gambles."
           ],
           "pills": [
             "+2 per ace",
@@ -69,33 +69,33 @@
             "-2 per double fault",
             "-20 upset loss"
           ],
-          "subtitle": "Pre-Draw Edition Themes",
+          "subtitle": "Results Themes",
           "bullets": [
-            "Pre-draw planning is about archetypes first and names second.",
-            "Bonus Ball decisions should stay flexible until route clarity improves.",
-            "Value matters most when it can survive multiple plausible draw outcomes.",
-            "Early mistakes usually begin with assumptions about path quality."
+            "Completed weeks usually reward path quality plus repeatable scoring.",
+            "Bonus Ball outcomes are strongest when tied to stability, not just ceiling.",
+            "Useful value plays still need a believable route to points.",
+            "Most misses come from volatility, bad path assumptions, or false bargains."
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Early-Week Fantasy Takeaways",
+          "title": "Week 1980 Fantasy Takeaways",
           "items": [
             {
               "tag": "Best roster construction lesson",
-              "body": "Start with players who project to carry advancement equity in a variety of bracket shapes, then layer in value only where the scoring profile is portable."
+              "body": "Builds that scored well usually started with players who had both advancement equity and a scoring base that did not depend on chaos."
             },
             {
               "tag": "Best scoring lesson",
-              "body": "Players who can pair likely progression with ace volume or efficient straight-set potential remain the cleanest early fantasy targets."
+              "body": "Aces, holds, and efficient wins remained the cleanest way to separate strong fantasy performers from players who merely survived."
             },
             {
               "tag": "Best process lesson",
-              "body": "Treat the pre-draw phase as a filtering exercise. Narrow the pool to stable profiles now, then react to route quality once the official bracket is posted."
+              "body": "The week reinforced that bracket reading matters most when it identifies who can actually convert opportunity into multiple rounds of scoring."
             },
             {
               "tag": "Best caution flag",
-              "body": "If a player needs a very specific draw to justify salary, that is usually a sign to wait rather than force the pick in early builds."
+              "body": "If a pick needed several close matches to justify salary, that profile was usually too fragile for a strong results-week return."
             }
           ]
         }
@@ -106,41 +106,45 @@
       "cards": [
         {
           "kind": "pick-list",
-          "title": "Who Usually Rates Well Before A Slate Sharpens",
+          "title": "Top Performer Profiles From A Completed Week",
           "items": [
             {
-              "tag": "Stable premium anchors",
-              "body": "Expensive players tend to rate best early when their underlying level suggests they can justify salary without needing a perfect bracket to do it."
+              "tag": "Premium anchors that delivered",
+              "body": "The most successful expensive plays are usually the ones who justified salary with both progression and efficient match scoring rather than simply surviving."
             },
             {
-              "tag": "Mid-tier builders",
-              "body": "The most appealing mid-range options are usually players with enough serve or return quality to stay fantasy-relevant even if the draw is only neutral rather than ideal."
+              "tag": "Mid-tier outperformers",
+              "body": "The best mid-range results often come from players whose route was realistic and whose serve or first-strike patterns kept fantasy points flowing round after round."
             },
             {
-              "tag": "Bracket-ready risers",
-              "body": "Some players become immediate value candidates the moment the draw opens for them, so they belong on the watchlist even before official placement is known."
+              "tag": "Section winners that mattered",
+              "body": "When a portion of the bracket opened up, the players who capitalized on it became some of the most important fantasy pieces of the week."
+            },
+            {
+              "tag": "Portable scorers",
+              "body": "Players with reliable ace volume and stable hold numbers tend to remain useful fantasy assets because their output travels well across different matchup types."
             }
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Bonus Ball Pre-Draw Lessons",
+          "title": "Bonus Ball Results Board",
           "items": [
             {
-              "tag": "Best default setup",
-              "body": "The safest early multiplier plan is to reserve Bonus Ball for the player most likely to combine multiple-win equity with repeatable scoring traits."
+              "tag": "Best default Bonus Ball lesson",
+              "body": "The multiplier usually works best on the player with the clearest blend of advancement safety and repeatable scoring production."
             },
             {
-              "tag": "When aggression can pay",
-              "body": "An aggressive Bonus Ball can make sense if a player's serve-led ceiling is high enough to separate, but it still needs a believable path once the bracket arrives."
+              "tag": "When aggression paid off",
+              "body": "Aggressive Bonus Ball choices can succeed when a high-upside scorer also gets enough runway to stack points before the bracket tightens."
             },
             {
-              "tag": "What to avoid",
-              "body": "The weakest pre-draw multiplier ideas usually involve volatile players whose fantasy case depends too heavily on favorable placement."
+              "tag": "What likely failed",
+              "body": "Multiplier misses usually came from backing volatility over stability, especially when the route included dangerous returners or upset pressure."
             },
             {
-              "tag": "Next-step adjustment",
-              "body": "When the official draw lands, break ties by leaning toward the candidate less dependent on tiebreaks, marathon matches, or upset-heavy sequencing."
+              "tag": "Best tiebreaker lesson",
+              "body": "When two candidates looked close, the better results usually came from choosing the player less dependent on narrow escapes and more likely to win cleanly."
             }
           ]
         }
@@ -151,60 +155,60 @@
       "cards": [
         {
           "kind": "pick-list",
-          "title": "Value Targets And Alternate Planning",
+          "title": "Value Winners And Alternate Lessons",
           "items": [
             {
               "tag": "Best value profile",
-              "body": "Useful salary relief usually starts with players priced below the top tier who still bring at least one bankable fantasy trait, such as ace volume, hold stability, or a dependable baseline floor."
+              "body": "The strongest value returns usually came from lower-cost players who had one clear fantasy strength and a realistic path to at least one meaningful scoring opportunity."
             },
             {
-              "tag": "Why some cheap plays become viable",
-              "body": "Lower-cost options become real targets when the draw reduces early resistance and lets their core strengths translate into immediate points."
+              "tag": "Where value tends to hit",
+              "body": "Useful bargains are often found below the top salary tier, especially when price relief comes with a manageable early route and some serve-based scoring floor."
             },
             {
-              "tag": "Alternate priorities",
-              "body": "The best alternates are not just minimum-cost placeholders; they are flexible options who can become starters if the bracket creates a cleaner advancement lane."
+              "tag": "Alternate planning lesson",
+              "body": "Alternates matter most when they are live contingency options with real scoring paths, not just leftover salary placeholders."
             },
             {
-              "tag": "Portable scoring traits",
-              "body": "Serve-led players remain attractive early value shapes because ace totals and hold-based stability can matter even before a deep run is confirmed."
+              "tag": "Cheap-play filter",
+              "body": "The week again showed that low salary alone is not enough; a playable value pick still needs either route quality, a stable serve base, or upset potential that can actually convert."
             }
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Where Early Lineups Usually Go Wrong",
+          "title": "Misses, Traps, And What To Carry Forward",
           "items": [
             {
-              "tag": "Assumed soft sections",
-              "body": "Projecting an easy route before the bracket is official often leads to overconfidence and weak roster construction."
+              "tag": "Crowded-path disappointments",
+              "body": "Even talented players can underdeliver in fantasy when their section demands too many difficult wins too early."
             },
             {
-              "tag": "False value",
-              "body": "Cheap players without a clear path or a portable scoring base still carry major downside, even if they help the salary puzzle."
+              "tag": "False value misses",
+              "body": "Cheap names without a believable route usually fail to matter, even when they look useful in a salary build."
             },
             {
-              "tag": "Name-brand overconfidence",
-              "body": "Popular players can still be poor fantasy fits when price leaves little room for a merely average draw."
+              "tag": "Name-brand traps",
+              "body": "Expensive reputations remain dangerous when salary assumes a deep run but the actual scoring path offers little margin for error."
             },
             {
-              "tag": "Bonus Ball overreach",
-              "body": "Doubling a volatile player before route clarity arrives is one of the easiest ways to create unnecessary downside in an otherwise solid build."
+              "tag": "Next-week adjustment",
+              "body": "Carry forward the same discipline: prioritize route clarity, repeatable scoring, and Bonus Ball stability over pure upside chasing."
             }
           ]
         }
       ]
     }
   ],
-  "footer_note": "Pre-draw edition refreshed on <strong>2026-05-13</strong>. Updated by Lina's autonomous fantasy cycle using available source packets; because primary ATP rankings, news, and tournament access was incomplete in this cycle, player-specific claims and slate details remain intentionally conservative until the official draw lands.",
+  "footer_note": "Results edition refreshed on <strong>2026-05-13</strong>. Updated by Lina's autonomous fantasy cycle using available source packets; because primary ATP scores, rankings, results archive, and news access was incomplete in this cycle, player-specific claims and tournament-specific outcomes remain intentionally conservative.",
   "output": "week-1980.html",
-  "archive_summary": "Pre-draw edition ATP Fantasy preview for Week 1980 with a conservative early-build lens focused on roster construction priorities, Bonus Ball planning, value archetypes, common pre-draw mistakes, and what to watch before the official ATP slate sharpens.",
+  "archive_summary": "Results edition ATP Fantasy recap for Week 1980 with a conservative completed-week lens focused on winning lineup lessons, top performer profiles, Bonus Ball outcomes, value hits, common misses, and actionable takeaways for future slates.",
   "publish": {
-    "filename": "2026-week-1980-pre-draw.html",
+    "filename": "2026-week-1980-results.html",
     "week": "Week 1980",
-    "label": "Week 1980 Pre-Draw Edition",
-    "updated_at": "2026-05-13T08:59:02-05:00",
-    "live": true,
+    "label": "Week 1980 Results",
+    "updated_at": "2026-05-18T08:01:20-05:00",
+    "live": false,
     "draft": false
   }
 }
