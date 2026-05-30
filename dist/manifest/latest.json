@@ -1,12 +1,12 @@
 {
   "site_title": "Tennis Automated Fantasy",
-  "generated_at": "2026-05-25T08:00:37-05:00",
+  "generated_at": "2026-05-30T14:00:55-05:00",
   "current": {
-    "week": "Week 2939",
-    "label": "Week 2939 Results",
-    "updated_at": "2026-05-25T08:00:35-05:00",
-    "relative_url": "/pages/2026-week-2939-results.html",
-    "url": "https://fantasy.tennisautomated.com/pages/2026-week-2939-results.html",
-    "source": "data/week-2939.json"
+    "week": "Week 3896",
+    "label": "Week 3896 Draw Update",
+    "updated_at": "2026-05-30T14:00:53-05:00",
+    "relative_url": "/pages/2026-week-3896-draw-update.html",
+    "url": "https://fantasy.tennisautomated.com/pages/2026-week-3896-draw-update.html",
+    "source": "data/week-3896.json"
   }
 }
