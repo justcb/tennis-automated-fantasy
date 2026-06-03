@@ -1,12 +1,12 @@
 {
   "site_title": "Tennis Automated Fantasy",
-  "generated_at": "2026-05-30T14:00:55-05:00",
+  "generated_at": "2026-06-03T08:06:45-05:00",
   "current": {
-    "week": "Week 3896",
-    "label": "Week 3896 Draw Update",
-    "updated_at": "2026-05-30T14:00:53-05:00",
-    "relative_url": "/pages/2026-week-3896-draw-update.html",
-    "url": "https://fantasy.tennisautomated.com/pages/2026-week-3896-draw-update.html",
-    "source": "data/week-3896.json"
+    "week": "Week 3903",
+    "label": "Week 3903 Pre-Draw Edition",
+    "updated_at": "2026-06-03T08:06:42-05:00",
+    "relative_url": "/pages/2026-week-3903-pre-draw.html",
+    "url": "https://fantasy.tennisautomated.com/pages/2026-week-3903-pre-draw.html",
+    "source": "data/week-3903.json"
   }
 }

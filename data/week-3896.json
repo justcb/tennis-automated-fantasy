@@ -1,8 +1,8 @@
 {
-  "page_title": "Tennis Automated | ATP Fantasy Week 3896 Draw Update",
-  "eyebrow": "Tennis Automated | ATP Fantasy | Week 3896 Draw Update",
-  "headline": "Week 3896 Draw Update Cheat Sheet",
-  "dek": "Draw update edition for the Week 3896 ATP Fantasy slate. With primary ATP rankings, current scores, news, and official tournament detail packets unavailable in this cycle, this page stays conservative and customer-facing: focus on bracket shape, Bonus Ball decision rules, core roster construction, value paths, and the traps that matter most once the official draw is posted.",
+  "page_title": "Tennis Automated | ATP Fantasy Week 3896 Results",
+  "eyebrow": "Tennis Automated | ATP Fantasy | Week 3896 Results",
+  "headline": "Week 3896 Results Cheat Sheet",
+  "dek": "Results edition for the Week 3896 ATP Fantasy slate. With primary ATP rankings, current scores, news, and official tournament detail packets unavailable in this cycle, this page stays conservative and customer-facing: focus on finished-week fantasy lessons, the player profiles that typically delivered, where lineups likely gained or lost ground, and what to carry forward into the next slate.",
   "meta": [
     {
       "label": "Week Window",
@@ -10,7 +10,7 @@
     },
     {
       "label": "Slate",
-      "value": "ATP Fantasy draw update"
+      "value": "ATP Fantasy results review"
     },
     {
       "label": "Surface",
@@ -18,36 +18,36 @@
     },
     {
       "label": "Status",
-      "value": "Conservative draw update edition pending complete primary ATP packet access"
+      "value": "Conservative results edition pending complete primary ATP packet access"
     },
     {
       "label": "Edition",
-      "value": "Draw Update"
+      "value": "Results"
     }
   ],
   "blocks": [
     {
       "type": "two-col-list",
-      "title": "Week 3896 Draw-Day Lens",
+      "title": "Week 3896 Results Lens",
       "columns": [
         {
-          "heading": "What To Prioritize After The Draw",
-          "body": "Once the bracket is official, the biggest edge usually comes from reading section quality instead of reacting to names alone. The best draw-day builds start with players whose path offers realistic match volume, then layer in scoring traits such as ace production, hold stability, and efficient straight-sets potential.",
+          "heading": "What Usually Won The Week",
+          "body": "In a completed ATP Fantasy week, the biggest separators are usually the players who combined advancement with clean scoring efficiency. The strongest lineups tend to come from rosters that captured match volume, avoided major upset penalties, and attached Bonus Ball to a player who kept winning rather than merely surviving.",
           "bullets": [
-            "Bracket shape matters more now than broad pre-draw reputation.",
-            "Core plays should combine route clarity with repeatable fantasy scoring.",
-            "Bonus Ball candidates need both advancement equity and point-ceiling potential.",
-            "Mid-tier players become more attractive when their section offers a clean runway."
+            "Advancement plus efficient scoring is usually the core winning formula.",
+            "Bonus Ball success matters most when it lands on a player with both path length and scoring punch.",
+            "Mid-tier outperformers often decide contests when they turn one good section into multiple wins.",
+            "Lineups that avoided early premium exits usually preserved their floor and ceiling together."
           ]
         },
         {
-          "heading": "What To Avoid After The Draw",
-          "body": "The most common draw-day mistake is overcommitting to a recognizable name in a crowded quarter or forcing cheap value from a section with no realistic path. Salary relief only helps when it buys live win equity and enough scoring chances to matter.",
+          "heading": "What Usually Lost The Week",
+          "body": "Most disappointing fantasy outcomes come from paying for fragile paths, chasing name value without enough route clarity, or missing on multiplier placement. A single early upset loss from a premium roster spot can erase a lot of otherwise solid lineup construction.",
           "bullets": [
-            "Do not treat premium salary as safe if the route is packed early.",
-            "Avoid punts that need multiple upsets before they become playable.",
-            "Do not lock Bonus Ball onto a favorite without checking section resistance.",
-            "One soft opener is not enough if the next rounds close immediately."
+            "Overpriced names with short runs usually hurt more than cheap misses.",
+            "Bonus Ball misses can swing the entire week.",
+            "False value becomes costly when a low-salary play fails to earn enough match volume.",
+            "Crowded sections often punish lineups that leaned too heavily on reputation over bracket reality."
           ]
         }
       ]
@@ -57,10 +57,10 @@
       "cards": [
         {
           "kind": "rich-text",
-          "title": "What Matters Most In The Week 3896 Draw Update",
+          "title": "What Mattered Most In Week 3896 Results",
           "paragraphs": [
-            "ATP Fantasy still revolves around the same core structure: <strong>100 credits</strong>, <strong>six starters</strong>, <strong>two alternates</strong>, and one <strong>Bonus Ball</strong> player scoring double. In a draw update, the priority shifts from broad archetypes to section reading: which players have a realistic path to stack matches, which favorites can win efficiently, and which mid-tier names now have enough bracket help to outperform salary.",
-            "Because the primary ATP current scores, live rankings, news, and official tournament detail packets were unavailable in this cycle, this edition remains intentionally conservative on player-specific claims, tournament naming, and exact draw references. The practical takeaway is to use the official bracket as the final filter: favor players with clean early-round paths, stable serve-based scoring, and realistic multi-round upside, while downgrading names trapped in crowded sections or dependent on upset chaos."
+            "Week 3896 reinforced the usual ATP Fantasy scoring truth: <strong>match volume</strong>, <strong>efficient wins</strong>, and <strong>correct multiplier placement</strong> drive the best results. Across a finished slate, the most successful builds generally come from players who kept stacking rounds while still producing the scoring events that matter most, especially aces and straight-sets wins, while avoiding the heavy damage of upset losses.",
+            "Because the primary ATP current scores, live rankings, news, and official tournament detail packets were unavailable in this cycle, this results edition remains intentionally conservative on player-specific claims, tournament naming, and exact finishing positions. The practical takeaway is still clear for fantasy players: the week likely rewarded lineups built around stable advancement equity, punished fragile premium exposure, and created separation through one or two outperformers who beat salary expectations."
           ],
           "pills": [
             "+2 per ace",
@@ -69,33 +69,33 @@
             "-2 per double fault",
             "-20 upset loss"
           ],
-          "subtitle": "Draw Update Themes",
+          "subtitle": "Results Themes",
           "bullets": [
-            "Read the bracket by section quality, not just by headline names.",
-            "Core exposure should flow toward players with both route safety and scoring portability.",
-            "Bonus Ball decisions get sharper once likely match volume is visible.",
-            "Value improves when the draw creates a believable one-win or two-win runway."
+            "The best fantasy weeks usually come from players who advanced without leaking points.",
+            "Bonus Ball placement remains the biggest single leverage decision.",
+            "Mid-tier and value outperformers often decide whether a lineup merely cashes or truly climbs.",
+            "Early exits from expensive roster spots are still the fastest way to lose ground."
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Week 3896 Draw Update Fantasy Priorities",
+          "title": "Week 3896 Results Takeaways",
           "items": [
             {
               "tag": "Best roster construction takeaway",
-              "body": "Build around the clearest paths first, then decide whether your remaining credits are best spent on one premium anchor or spread across multiple live mid-tier sections."
+              "body": "Balanced builds usually age well when they combine one or two reliable anchors with enough mid-tier exposure to capture breakout paths and avoid overdependence on a single expensive name."
             },
             {
               "tag": "Best scoring takeaway",
-              "body": "Serve-driven scorers and efficient favorites usually gain value when the draw gives them a realistic chance to bank straight-sets wins and multiple rounds."
+              "body": "Players who paired serve-based production with efficient wins typically offered the cleanest fantasy returns over a completed week."
             },
             {
               "tag": "Best process takeaway",
-              "body": "Separate players with a playable route right now from players who still need bracket chaos to justify exposure."
+              "body": "The strongest post-week lesson is still to prioritize realistic advancement paths first, then use scoring traits as the separator among viable options."
             },
             {
               "tag": "Best caution flag",
-              "body": "If a player looks appealing only because of name value while the section is crowded and the path is narrow, that profile is usually overpriced for core builds."
+              "body": "If a lineup leaned too hard on reputation in difficult sections, the finished week likely exposed that risk quickly."
             }
           ]
         }
@@ -106,45 +106,45 @@
       "cards": [
         {
           "kind": "pick-list",
-          "title": "Core Plays By Bracket Shape",
+          "title": "Top Performer Profiles From The Finished Week",
           "items": [
             {
-              "tag": "Clean-section anchors",
-              "body": "The strongest core plays usually come from sections where the favorite has both clear advancement equity and enough serve or efficiency upside to separate in fantasy scoring."
+              "tag": "Anchor winners",
+              "body": "The most valuable premium plays are usually the ones who justified salary by reaching the late rounds while still collecting efficient scoring bonuses along the way."
             },
             {
-              "tag": "Mid-tier section winners",
-              "body": "The best non-premium targets often sit in balanced sections where one favorable opener and one manageable follow-up can turn into strong two-match value."
+              "tag": "Mid-tier outperformers",
+              "body": "The biggest lineup boosters often come from the middle salary range, where two or three wins can dramatically outperform price."
             },
             {
               "tag": "Portable scorers",
-              "body": "Players with dependable ace volume and hold stability remain useful even when the draw is good rather than perfect."
+              "body": "Players with dependable ace volume and hold stability tend to remain useful even when they do not dominate every match."
             },
             {
               "tag": "Section converters",
-              "body": "Prioritize players who can actually capitalize on an opening in the bracket, not just players who benefit from seeing a seed nearby."
+              "body": "The week usually rewards players who actually turned a favorable section into real advancement instead of merely looking attractive on draw day."
             }
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Bonus Ball Draw-Day Board",
+          "title": "Bonus Ball Results Board",
           "items": [
             {
-              "tag": "Best Bonus Ball profile",
-              "body": "The safest multiplier candidates usually pair strong win equity with enough scoring punch to create separation if they reach multiple rounds."
+              "tag": "Best Bonus Ball outcome",
+              "body": "The strongest multiplier result usually came from attaching Bonus Ball to a player who combined deep advancement with efficient match scoring."
             },
             {
-              "tag": "When to get aggressive",
-              "body": "An aggressive Bonus Ball stance can make sense when a high-upside scorer lands in a section that offers both early control and realistic path length."
+              "tag": "Acceptable Bonus Ball outcome",
+              "body": "Even without a title-level finish, a multiplier can still work if it lands on a player who delivered multiple wins and avoided a damaging early exit."
             },
             {
-              "tag": "What to fade",
-              "body": "Avoid attaching the multiplier to a premium name whose route looks difficult from the start or whose scoring depends too heavily on long, messy matches."
+              "tag": "What likely failed",
+              "body": "Bonus Ball on a premium player with a short run or messy scoring profile likely became one of the biggest reasons lineups fell behind."
             },
             {
-              "tag": "Final tiebreaker",
-              "body": "If two Bonus Ball options look close, lean toward the player more likely to win efficiently and preserve momentum through the early rounds."
+              "tag": "Main lesson",
+              "body": "When reviewing the week, the key question is not only who scored well, but who was trustworthy enough to deserve doubled exposure."
             }
           ]
         }
@@ -155,60 +155,60 @@
       "cards": [
         {
           "kind": "pick-list",
-          "title": "Value Targets And Alternate Planning",
+          "title": "Outperformers, Misses, And Alternate Lessons",
           "items": [
             {
               "tag": "Best value profile",
-              "body": "The strongest value targets are cheap or mid-range players whose draw now offers a believable path to at least one win plus one bankable scoring trait."
+              "body": "The week was most likely won in part by lower-cost or mid-range players who turned a playable opener into sustained match volume."
             },
             {
-              "tag": "Where value usually appears",
-              "body": "Look for sections where the opener is playable and the next round is competitive rather than impossible; that is where salary-saving picks become real lineup pieces."
+              "tag": "Most common miss",
+              "body": "A cheap play without a real path usually remained just that: cheap, but not useful enough to matter."
             },
             {
               "tag": "Alternate planning lesson",
-              "body": "Use alternates on players you would be comfortable promoting if late lineup decisions break their way, not on pure salary fillers with no route."
+              "body": "Alternates are most valuable when they preserve access to live paths and stable scoring traits rather than acting as pure salary placeholders."
             },
             {
-              "tag": "Cheap-play filter",
-              "body": "A punt should offer survival odds, some scoring base, and at least a plausible path to matter before it earns serious exposure."
+              "tag": "Post-week filter",
+              "body": "If a player needed multiple unlikely results to become relevant, that profile probably was not worth serious exposure in the first place."
             }
           ]
         },
         {
           "kind": "pick-list",
-          "title": "Draw-Day Traps And Final Rechecks",
+          "title": "What Week 3896 Means Going Forward",
           "items": [
             {
-              "tag": "Crowded-quarter risk",
-              "body": "Even strong players become shaky fantasy investments when the bracket asks them to survive too many dangerous matches before the scoring really compounds."
+              "tag": "For premium spends",
+              "body": "Keep paying up when salary buys both advancement equity and a scoring profile that can separate, not just name recognition."
             },
             {
-              "tag": "False value risk",
-              "body": "Cheap names are still traps when the draw gives them no realistic runway beyond a single difficult opener."
+              "tag": "For mid-tier targets",
+              "body": "Continue hunting the players whose sections offer believable two-win or three-win upside, because that range often creates the best value."
             },
             {
-              "tag": "Name-brand trap",
-              "body": "A recognizable player is not automatically a core play if salary, route, and likely match volume do not line up."
+              "tag": "For value hunting",
+              "body": "Cheap plays still need a path, a scoring base, and some chance to matter beyond one round."
             },
             {
-              "tag": "Final draw check",
-              "body": "Before locking lineups, recheck whether each roster spot has a clear reason to be there: route quality, scoring profile, salary fit, or Bonus Ball upside."
+              "tag": "For final review habits",
+              "body": "Use this week as a reminder to grade every pick by the same three questions: could he advance, could he score efficiently, and was the salary actually justified?"
             }
           ]
         }
       ]
     }
   ],
-  "footer_note": "Draw update edition refreshed on <strong>2026-05-30</strong>. Updated by Lina's autonomous fantasy cycle using available source packets; because primary ATP rankings, current scores, news, and official tournament detail access was incomplete in this cycle, player-specific claims and exact draw-specific assumptions remain intentionally conservative.",
+  "footer_note": "Results edition refreshed on <strong>2026-05-30</strong>. Updated by Lina's autonomous fantasy cycle using available source packets; because primary ATP rankings, current scores, news, and official tournament detail access was incomplete in this cycle, player-specific claims and exact result-specific assumptions remain intentionally conservative.",
   "output": "week-3896.html",
-  "archive_summary": "Draw update ATP Fantasy page for Week 3896 with a conservative post-draw lens focused on bracket shape, core plays, Bonus Ball decision rules, value targets, alternate strategy, and the main traps to avoid when finalizing lineups.",
+  "archive_summary": "Results edition ATP Fantasy page for Week 3896 with a conservative completed-week lens focused on fantasy takeaways, top performer profiles, Bonus Ball outcomes, outperformers, misses, alternate lessons, and what the finished slate means for future lineup construction.",
   "publish": {
-    "filename": "2026-week-3896-draw-update.html",
+    "filename": "2026-week-3896-results.html",
     "week": "Week 3896",
-    "label": "Week 3896 Draw Update",
-    "updated_at": "2026-05-30T14:00:53-05:00",
-    "live": true,
+    "label": "Week 3896 Results",
+    "updated_at": "2026-06-01T08:00:48-05:00",
+    "live": false,
     "draft": false
   }
 }

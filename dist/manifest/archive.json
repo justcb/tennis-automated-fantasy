@@ -1,13 +1,85 @@
 {
   "pages": [
     {
+      "week": "Week 3903",
+      "label": "Week 3903 Pre-Draw Edition",
+      "updated_at": "2026-06-03T08:06:42-05:00",
+      "relative_url": "/pages/2026-week-3903-pre-draw.html",
+      "url": "https://fantasy.tennisautomated.com/pages/2026-week-3903-pre-draw.html",
+      "headline": "Week 3903 Pre-Draw Cheat Sheet",
+      "source": "data/week-3903.json"
+    },
+    {
+      "week": "Week 3902",
+      "label": "Week 3902 Pre-Draw Edition",
+      "updated_at": "2026-06-03T08:05:43-05:00",
+      "relative_url": "/pages/2026-week-3902-pre-draw.html",
+      "url": "https://fantasy.tennisautomated.com/pages/2026-week-3902-pre-draw.html",
+      "headline": "Week 3902 Pre-Draw Cheat Sheet",
+      "source": "data/week-3902.json"
+    },
+    {
+      "week": "Week 3901",
+      "label": "Week 3901 Pre-Draw Edition",
+      "updated_at": "2026-06-03T08:04:42-05:00",
+      "relative_url": "/pages/2026-week-3901-pre-draw.html",
+      "url": "https://fantasy.tennisautomated.com/pages/2026-week-3901-pre-draw.html",
+      "headline": "Week 3901 Pre-Draw Cheat Sheet",
+      "source": "data/week-3901.json"
+    },
+    {
+      "week": "Week 3900",
+      "label": "Week 3900 Pre-Draw Edition",
+      "updated_at": "2026-06-03T08:03:43-05:00",
+      "relative_url": "/pages/2026-week-3900-pre-draw.html",
+      "url": "https://fantasy.tennisautomated.com/pages/2026-week-3900-pre-draw.html",
+      "headline": "Week 3900 Pre-Draw Cheat Sheet",
+      "source": "data/week-3900.json"
+    },
+    {
+      "week": "Week 3899",
+      "label": "Week 3899 Pre-Draw Edition",
+      "updated_at": "2026-06-03T08:02:42-05:00",
+      "relative_url": "/pages/2026-week-3899-pre-draw.html",
+      "url": "https://fantasy.tennisautomated.com/pages/2026-week-3899-pre-draw.html",
+      "headline": "Week 3899 Pre-Draw Cheat Sheet",
+      "source": "data/week-3899.json"
+    },
+    {
+      "week": "Week 3898",
+      "label": "Week 3898 Pre-Draw Edition",
+      "updated_at": "2026-06-03T08:01:43-05:00",
+      "relative_url": "/pages/2026-week-3898-pre-draw.html",
+      "url": "https://fantasy.tennisautomated.com/pages/2026-week-3898-pre-draw.html",
+      "headline": "Week 3898 Pre-Draw Cheat Sheet",
+      "source": "data/week-3898.json"
+    },
+    {
+      "week": "Week 3897",
+      "label": "Week 3897 Pre-Draw Edition",
+      "updated_at": "2026-06-03T08:00:53-05:00",
+      "relative_url": "/pages/2026-week-3897-pre-draw.html",
+      "url": "https://fantasy.tennisautomated.com/pages/2026-week-3897-pre-draw.html",
+      "headline": "Week 3897 Pre-Draw Cheat Sheet",
+      "source": "data/week-3897.json"
+    },
+    {
+      "week": "Week 3896",
+      "label": "Week 3896 Results",
+      "updated_at": "2026-06-01T08:00:48-05:00",
+      "relative_url": "/pages/2026-week-3896-results.html",
+      "url": "https://fantasy.tennisautomated.com/pages/2026-week-3896-results.html",
+      "headline": "Week 3896 Results Cheat Sheet",
+      "source": "data/week-3896.json"
+    },
+    {
       "week": "Week 3896",
       "label": "Week 3896 Draw Update",
       "updated_at": "2026-05-30T14:00:53-05:00",
       "relative_url": "/pages/2026-week-3896-draw-update.html",
       "url": "https://fantasy.tennisautomated.com/pages/2026-week-3896-draw-update.html",
       "headline": "Week 3896 Draw Update Cheat Sheet",
-      "source": "data/week-3896.json"
+      "source": "data/week-3896-draw-update.json"
     },
     {
       "week": "Week 3896",
